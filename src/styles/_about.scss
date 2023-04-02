@@ -1,0 +1,15 @@
+@import "variable";
+@import "fonts";
+$danger-color:pink;
+.container {
+    color: red;
+    h1{
+      color: blue;
+      font-family: 'Custome';
+    }
+  
+  }
+  .title{
+    background-color: $danger-color;
+
+  }
