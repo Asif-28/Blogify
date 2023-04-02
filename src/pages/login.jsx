@@ -1,12 +1,15 @@
+import Loading from "@/comp/Layout"
 import { useSession, signIn, signOut } from "next-auth/react"
 import Link from "next/link"
 
 export default function Component() {
   const { data: session } = useSession()
+  
   if (session) {
     console.log(session)
     return (
       <div >
+        <Loading/>
         <div>
 
       <img src={session.user.image} alt="" />

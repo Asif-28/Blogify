@@ -8,7 +8,8 @@ import login from "./login";
 import Link from 'next/link'
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Home(props) {
+  console.log(props)
   return (
     <>
       <Head>
@@ -17,14 +18,24 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-     <main>
+     <main style={{display:"flex", justifyContent:"center", flexDirection:"column", alignItems:"center"}}>
      <h1>Auth testing</h1>
      <h2>You are at the home page </h2>
+     <img style={{height:"400px" , width:"400px"}} src={props.res.message} alt="dog-ceo" />
      
      <br />
-    <Link href='./login'><button> Login Page </button></Link>
-    <Link href='./account'><button>account </button></Link>
+    <Link style={{padding:"1rem"}} href='./login'><button style={{padding:".6rem" ,fontSize:"1.2rem"}}> Login Page </button></Link>
+    <Link href='./account'><button style={{padding:".6rem", fontSize:"1.2rem"}}>account page </button></Link>
      </main>
     </>
   )
+}
+
+export const getServerSideProps = async (context) =>{
+  const data = await fetch ('https://dog.ceo/api/breeds/image/random');
+const res= await data.json();
+console.log(res);
+return {
+  props:{res}
+}
 }
