@@ -1,10 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import About from '@/comp/about/About'
-import Contact from '@/comp/about/Contact'
-import Component from '@/pages/login'
-import login from "./login";
+
 import Link from 'next/link'
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,6 +27,7 @@ export default function Home(props) {
     </>
   )
 }
+// Server side rendering  details 
 
 export const getServerSideProps = async (context) =>{
   const data = await fetch ('https://dog.ceo/api/breeds/image/random');
@@ -39,3 +37,22 @@ return {
   props:{res}
 }
 }
+
+//  TRIED THIS SECTION WITH  TRY CATCH BLOCK 
+// export const getServerSideProps = async (context) =>{
+//   try{
+
+//     const data = await fetch ('https://dog.ceo/api/breeds/image/random');
+//     if(!response.ok){
+//       throw new Error ('network response is not ok')
+//     }
+//     const res= await data.json();
+//     console.log(res);
+//   }
+//   catch (error) {
+//     console.error('There was a problem fetching the data:', error);
+//   }
+// return {
+//   props:{res}
+// }
+// }

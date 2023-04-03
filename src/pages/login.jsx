@@ -8,26 +8,27 @@ export default function Component() {
   if (session) {
     console.log(session)
     return (
-      <div >
-        <Loading/>
-        <div>
-
-      <img src={session.user.image} alt="" />
+      <div style={{display:"flex", flexDirection:"column",justifyContent:"center", alignItems:"center"}}>
+     
+        <div style={{margin:"10px"}}>
+          <img src={session.user.image} alt="" />
         </div>
-        Signed in as {session.user.email} <br />
-        {session.user.name}
-        <button onClick={() => signOut()}>Sign out</button>
+       <h3> Signed in as {session.user.email}</h3> <br />
+       <h1>{session.user.name}</h1> 
+        <button style={{padding:".6rem" , fontSize:"1.2rem"}} onClick={() => signOut()}>Sign out</button>
+        <Link href={`/account`}><button style={{padding:".6rem" , fontSize:"1.2rem"}}> account page</button></Link>
       </div>
     )
   }
   return (
-    <div>
-      Not signed in <br />
+    <div style={{display:"flex", flexDirection:"column",padding:"10rem 0", justifyContent:"center" , alignItems:"center"}}>
+    <h1>Login First  </h1><br />
       <br />
-      <button onClick={() => signIn()}>Sign in</button>
+      <button style={{padding:".6rem" , fontSize:"1.2rem"}} onClick={() => signIn()}>Sign in</button>
       <br />
  
-      <Link href={`/`}>Home</Link>
+      <Link href={`/`}><button style={{padding:".6rem" , fontSize:"1.2rem" ,margin:"5px"}}> Go To Home</button></Link>
+    
     </div>
   )
 }
