@@ -10,7 +10,7 @@ const account = (props) => {
     if(status=== 'authenticated')
     {
         return (
-            <div>
+            <div style={{display:"flex" , flexDirection:"column", justifyContent:"center", alignItems:"center" , padding:"20px"}}>
                 <p>Welcome {session.user.name}</p>
                 <img src={message} alt="dog-image" />
                 <button onClick={()=>signOut()}> SignOut</button>
@@ -34,7 +34,7 @@ export const getServerSideProps = async (context)=>{
 const session = await getSession (context)   
 const data = await fetch ('https://dog.ceo/api/breeds/image/random');
 const res= await data.json();
-console.log(res)
+// console.log(res)
 if(!session) {
     return {
         redirect : {
