@@ -21,7 +21,7 @@ export default function Home(props) {
      <img style={{height:"400px" , width:"400px"}} src={props.res.message} alt="dog-ceo" />
      
      <br />
-    <Link style={{padding:"1rem"}} href='./login'><button style={{padding:".6rem" ,fontSize:"1.2rem"}}> Login Page </button></Link>
+    {/* <Link style={{padding:"1rem"}} href='./login'><button style={{padding:".6rem" ,fontSize:"1.2rem"}}> Login Page </button></Link> */}
     <Link href='./account'><button style={{padding:".6rem", fontSize:"1.2rem"}}>account page </button></Link>
      </main>
     </>

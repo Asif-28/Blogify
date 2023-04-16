@@ -1,3 +1,4 @@
+import Header from '@/comp/Header';
 import Loader from '@/comp/Loader';
 import '@/styles/globals.scss'
 import { SessionProvider } from "next-auth/react"
@@ -17,6 +18,7 @@ export default function App({ Component,
   })
 
  return <>
+ <Header/>
 
   {loading ? <Loader/>: <>
   <SessionProvider session={session}>

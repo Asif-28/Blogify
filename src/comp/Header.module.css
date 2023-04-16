@@ -1,0 +1,26 @@
+.main{
+    background-color: rgb(116, 1, 162);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.logo{
+    font-size: larger;
+    
+}
+
+.item
+{
+display: flex;
+flex-direction: row;
+gap:3rem;
+padding: 1.5rem 0;
+margin: 0;
+list-style: none;
+font-size: 1.3rem;
+font-weight: 500;
+justify-content: flex-end;
+padding-right: 2rem;
+   
+}
+   

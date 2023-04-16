@@ -2,9 +2,9 @@ import React from 'react'
 import {  getSession, signOut, useSession } from 'next-auth/react'
 import { fetchData } from 'next-auth/client/_utils';
 
-const account = (props) => {
+const Account = (props) => {
     const {message}=props.res;
-    console.log(props)
+    // console.log(props)
     // console.log(message)
     const {data: session ,status} = useSession();
     if(status=== 'authenticated')
@@ -28,7 +28,7 @@ const account = (props) => {
 
 }
 
-export default account;
+export default Account;
 
 export const getServerSideProps = async (context)=>{
 const session = await getSession (context)   
@@ -43,6 +43,7 @@ if(!session) {
     }
 }
 return {
-    props:{session, res}
+    props:{session,res}
 }
 }
+
