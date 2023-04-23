@@ -27,6 +27,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import User from "../../../../models/users";
 import bcrypt from "bcryptjs";
 import dbConnect from "../../../../config/dbConnect";
+import CreLogin from "@/pages/credentialsLogin";
 
 export default NextAuth({
   session: {
@@ -42,6 +43,7 @@ export default NextAuth({
         const user = await User.findOne({ email });
 
         if (!user) {
+          console.log("email error")
           throw new Error("Invalid Email or Password");
         }
 

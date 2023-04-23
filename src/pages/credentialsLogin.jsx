@@ -64,7 +64,6 @@ else{
                     onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
-    
                 <div className={styles.item}>
                   <label className="form-label" htmlFor="password_field">
                     Password

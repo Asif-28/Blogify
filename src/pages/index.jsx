@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 
 import Link from 'next/link'
+import { signOut } from 'next-auth/react'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home(props) {
@@ -22,7 +23,7 @@ export default function Home(props) {
      
      <br />
     {/* <Link style={{padding:"1rem"}} href='./login'><button style={{padding:".6rem" ,fontSize:"1.2rem"}}> Login Page </button></Link> */}
-    <Link href='./account'><button style={{padding:".6rem", fontSize:"1.2rem"}}>account page </button></Link>
+    <Link href=''><button onClick={signOut} style={{padding:".6rem", fontSize:"1.2rem"}}>Logout </button></Link>
      </main>
     </>
   )
