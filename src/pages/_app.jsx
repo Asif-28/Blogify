@@ -19,7 +19,6 @@ export default function App({ Component,
 
  return <>
  <Header/>
-
   {loading ? <Loader/>: <>
   <SessionProvider session={session}>
   <Component {...pageProps} />

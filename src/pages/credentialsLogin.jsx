@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+import styles from "../styles/login.module.css"
 
 import { signIn, useSession } from "next-auth/react";
 
@@ -38,24 +39,25 @@ const CreLogin = () => {
 
 if(session)
 {
-router.push('/account')
+router.push('/')
 }
 else{
     return (
-        <div className="">
-          <div className="">
-            <div className="col-10 col-lg-5 ">
+        <div className={styles.main}>
+          <div className={styles.form}  >
+            <div className="">
               <form
                 className=""
                 onSubmit={submitHandler}
               >
-                <h1 className="">Login</h1>
-                <div className="">
+                <h1 className={styles.loginText}>Login</h1>
+                <div className={styles.item}>
                   <label className="form-label" htmlFor="email_field">
                     Email address
                   </label>
                   <input
                     type="email"
+                    placeholder="abc@example.com"
                     id="email_field"
                     className="form-control"
                     value={email}
@@ -63,12 +65,13 @@ else{
                   />
                 </div>
     
-                <div className="">
+                <div className={styles.item}>
                   <label className="form-label" htmlFor="password_field">
                     Password
                   </label>
                   <input
                     type="password"
+                    placeholder="******"
                     id="password_field"
                     className="form-control"
                     value={password}
@@ -78,23 +81,23 @@ else{
     
                 <button
                   type="submit"
-                  className=""
+                  className={styles.btn }
                 >
                   Sign in
                 </button>
     
-                <div className="">
+                <div >
                   <p>
-                    Not a member? <Link href="/register">Register</Link>
+                    Not a member? <Link className={styles.reg} href="/register">Register</Link>
                   </p>
                 </div>
               </form>
             </div>
-            <button onClick={handleGoogleLogin}>
+            <button className={styles.btn} onClick={handleGoogleLogin}>
             Sign in with Google
           </button>
           
-          <button onClick={handleGithubLogin}>
+          <button className={styles.btn} onClick={handleGithubLogin}>
             Sign in with Github
           </button>
           </div>
