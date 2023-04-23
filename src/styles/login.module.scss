@@ -33,7 +33,11 @@
     padding-bottom: 1.5rem;
     font-size: 2.5rem;
 }
-.btn{
+.btnCont{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+button{
     padding: .5rem;
     margin-right: 10px;
     color: #000;
@@ -44,10 +48,33 @@
     font-size: 1rem;
     font-weight: 400;
     letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    &:hover{
+        background-color: #ffd558;
+    }
+}
 }
 .reg{
     color: #000;
     font-size: medium;
     font-weight: 600;
 
+}
+.signBtn{
+    padding: .5rem;
+    margin-right: 10px;
+    color: #000;
+    background-color: #EEEADE;
+    cursor: pointer;
+    border: none;
+    border: 1px solid #000;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    &:hover{
+        background-color: #ffd558;
+    }   
 }

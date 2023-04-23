@@ -1,10 +1,11 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import styles from "../styles/login.module.css"
+import styles from "../styles/login.module.scss"
 
 import { signIn, useSession } from "next-auth/react";
-
+import GoogleIcon from '@mui/icons-material/Google';
+import { GitHub } from "@mui/icons-material";
 
 const CreLogin = () => {
     const router = useRouter();
@@ -80,7 +81,7 @@ else{
     
                 <button
                   type="submit"
-                  className={styles.btn }
+                  className={styles.signBtn}
                 >
                   Sign in
                 </button>
@@ -92,13 +93,16 @@ else{
                 </div>
               </form>
             </div>
-            <button className={styles.btn} onClick={handleGoogleLogin}>
-            Sign in with Google
+            <div className={styles.btnCont}>
+            <button  onClick={handleGoogleLogin}>
+              <GoogleIcon/>
+             Google
           </button>
-          
-          <button className={styles.btn} onClick={handleGithubLogin}>
-            Sign in with Github
+          <button className="" onClick={handleGithubLogin}>
+            <GitHub/>
+             Github
           </button>
+          </div>
           </div>
         </div>
       );
