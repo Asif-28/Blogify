@@ -12,7 +12,7 @@ const Header = () => {
         <ul className={styles.item}>
            <Link href={`/ `}><li>Home</li></Link> 
             <li>About</li>
-            <li>Contact</li>
+            <li>Gallery</li>
             <li>Blogs</li>
             <Link href='./credentialsLogin'><li>{session?`${session.user.name}`:"Login"}</li></Link>
             
