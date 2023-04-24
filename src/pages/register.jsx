@@ -1,7 +1,7 @@
 
 import axios from "axios";
 import React, { useState } from "react";
-import styles from "../styles/login.module.css"
+import styles from "../styles/login.module.scss"
 import { useRouter } from "next/router";
 const Register = () => {
     const router=useRouter();
