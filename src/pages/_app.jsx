@@ -18,16 +18,22 @@ export default function App({
   });
 
   return (
+    // <>
+    //   <SessionProvider session={session}>
+    //     <Header />
+    //     {loading ? (
+    //       <Loader />
+    //     ) : (
+    //       <>
+    //         <Component {...pageProps} />
+    //       </>
+    //     )}
+    //   </SessionProvider>
+    // </>
     <>
       <SessionProvider session={session}>
         <Header />
-        {loading ? (
-          <Loader />
-        ) : (
-          <>
-            <Component {...pageProps} />
-          </>
-        )}
+        <Component {...pageProps} />
       </SessionProvider>
     </>
   );

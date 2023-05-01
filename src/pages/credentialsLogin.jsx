@@ -6,34 +6,31 @@ import styles from "../styles/login.module.scss";
 import { signIn, useSession } from "next-auth/react";
 import GoogleIcon from "@mui/icons-material/Google";
 import { GitHub } from "@mui/icons-material";
-import { Alert } from "@mui/material";
+// import { Alert } from "@mui/material";
 
 const CreLogin = () => {
   const router = useRouter();
   const { data: session } = useSession();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
-  const [showAlert, setShowAlert] = useState(true);
-  const handleCloseAlert = () => {
-    setShowAlert(false);
-  };
+  // const [errorMessage, setErrorMessage] = useState("");
+  // const [showAlert, setShowAlert] = useState(true);
+  // const handleCloseAlert = () => {
+  //   setShowAlert(false);
+  // };
 
   const submitHandler = async (e) => {
     e.preventDefault();
-
     try {
       const data = await signIn("credentials", {
         redirect: false,
         email,
         password,
       });
-      // if (error) {
-      //   throw new Error(error);
-      // }
+
+      console.log(data);
     } catch (error) {
-      setErrorMessage("Invalid email or password");
-      setShowAlert(true);
+      console.log(error);
     }
   };
   const handleGoogleLogin = async () => {
@@ -91,7 +88,7 @@ const CreLogin = () => {
               </div> */}
               <div>
                 <p>
-                  Not a member?{" "}
+                  Not a member?
                   <Link className={styles.reg} href="/register">
                     Register
                   </Link>

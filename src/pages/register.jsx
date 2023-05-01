@@ -1,10 +1,9 @@
-
 import axios from "axios";
 import React, { useState } from "react";
-import styles from "../styles/login.module.scss"
+import styles from "../styles/login.module.scss";
 import { useRouter } from "next/router";
 const Register = () => {
-    const router=useRouter();
+  const router = useRouter();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -17,12 +16,10 @@ const Register = () => {
         name,
         email,
         password,
-        
       });
 
-    //   console.log(data);
-router.push("/")
-      
+      console.log(data);
+      router.push("/");
     } catch (error) {
       console.log(error);
     }
@@ -80,10 +77,7 @@ router.push("/")
               />
             </div>
 
-            <button 
-              type="submit"
-              className={styles.regBtn}
-            >
+            <button type="submit" className={styles.regBtn}>
               Register
             </button>
           </form>

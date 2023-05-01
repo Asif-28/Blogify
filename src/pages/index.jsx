@@ -1,11 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "next/font/google";
-
 import Link from "next/link";
 import { signOut } from "next-auth/react";
-import Roadmap from "./roadmap";
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -27,7 +23,6 @@ export default function Home() {
         <h1>Auth testing</h1>
         <h2>You are at the home page </h2>
         <br />
-
         <Link href="">
           <button
             onClick={signOut}
