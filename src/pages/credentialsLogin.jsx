@@ -6,18 +6,18 @@ import styles from "../styles/login.module.scss";
 import { signIn, useSession } from "next-auth/react";
 import GoogleIcon from "@mui/icons-material/Google";
 import { GitHub } from "@mui/icons-material";
-// import { Alert } from "@mui/material";
+import { Alert } from "@mui/material";
 
 const CreLogin = () => {
   const router = useRouter();
   const { data: session } = useSession();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const [errorMessage, setErrorMessage] = useState("");
-  // const [showAlert, setShowAlert] = useState(true);
-  // const handleCloseAlert = () => {
-  //   setShowAlert(false);
-  // };
+  const [errorMessage, setErrorMessage] = useState("");
+  const [showAlert, setShowAlert] = useState(true);
+  const handleCloseAlert = () => {
+    setShowAlert(false);
+  };
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -27,9 +27,13 @@ const CreLogin = () => {
         email,
         password,
       });
-
       console.log(data);
+      if (error) {
+        throw new Error(error);
+      }
     } catch (error) {
+      setErrorMessage("Invalid Email or Password");
+      setShowAlert(true);
       console.log(error);
     }
   };
@@ -79,13 +83,13 @@ const CreLogin = () => {
               <button type="submit" className={styles.signBtn}>
                 Sign in
               </button>
-              {/* <div style={{ marginTop: "10px" }}>
+              <div style={{ marginTop: "10px" }}>
                 {errorMessage && showAlert && (
                   <Alert severity="error" onClose={handleCloseAlert}>
                     {errorMessage}
                   </Alert>
                 )}
-              </div> */}
+              </div>
               <div>
                 <p>
                   Not a member?
