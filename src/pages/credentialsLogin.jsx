@@ -6,27 +6,35 @@ import styles from "../styles/login.module.scss"
 import { signIn, useSession } from "next-auth/react";
 import GoogleIcon from '@mui/icons-material/Google';
 import { GitHub } from "@mui/icons-material";
+import { Alert } from "@mui/material";
 
 const CreLogin = () => {
-    const router = useRouter();
-    const { data: session } = useSession()
+  const router = useRouter();
+  const { data: session } = useSession()
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState('');
+  const [showAlert, setShowAlert] = useState(true);
+  const handleCloseAlert = () => {
+    setShowAlert(false);
+  };
 
+ 
   const submitHandler = async (e) => {
     e.preventDefault();
-
+    
     try {
       const data = await signIn("credentials", {
         redirect: false,
         email,
         password,
-    });
-    // router.push('./account')
-
-      console.log(data);
+      });
+      if (error) {
+        throw new Error(error);
+      } 
     } catch (error) {
-      console.log(error);
+      setErrorMessage("Invalid email or password");
+      setShowAlert(true)
     }
   };
   const handleGoogleLogin = async () => {
@@ -45,7 +53,9 @@ router.push('/')
 else{
     return (
         <div className={styles.main}>
+          
           <div className={styles.form}  >
+        
             <div className="">
               <form
                 className=""
@@ -53,6 +63,7 @@ else{
               >
                 <h1 className={styles.loginText}>Login</h1>
                 <div className={styles.item}>
+      
                   <label className="form-label" htmlFor="email_field">
                     Email address
                   </label>
@@ -64,6 +75,7 @@ else{
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                   />
+                   
                 </div>
                 <div className={styles.item}>
                   <label className="form-label" htmlFor="password_field">
@@ -84,8 +96,16 @@ else{
                   className={styles.signBtn}
                 >
                   Sign in
+                  {/* <Alert severity="error">This is an error alert — check it out!</Alert> */}
                 </button>
-    
+                <div style={{marginTop:"10px"}}>
+                             {errorMessage && showAlert && (
+                          <Alert severity="error" onClose={handleCloseAlert}>
+                            {errorMessage}
+                        </Alert>
+                     )}
+      
+                    </div>
                 <div >
                   <p>
                     Not a member? <Link className={styles.reg} href="/register">Register</Link>

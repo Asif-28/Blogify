@@ -82,7 +82,7 @@ router.push("/")
 
             <button 
               type="submit"
-              className={styles.btn}
+              className={styles.regBtn}
             >
               Register
             </button>

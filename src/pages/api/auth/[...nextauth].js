@@ -29,7 +29,10 @@ import bcrypt from "bcryptjs";
 import dbConnect from "../../../../config/dbConnect";
 import CreLogin from "@/pages/credentialsLogin";
 
+
+
 export default NextAuth({
+  
   session: {
     strategy: "jwt",
   },
@@ -43,14 +46,14 @@ export default NextAuth({
         const user = await User.findOne({ email });
 
         if (!user) {
-          console.log("email error")
-          throw new Error("Invalid Email or Password");
+          // console.log("email error")
+          throw new Error("Invalid Email");
         }
 
         const isPasswordMatched = await bcrypt.compare(password, user.password);
 
         if (!isPasswordMatched) {
-          throw new Error("Invalid Email or Password");
+          throw new Error("Invalid Password");
         }
 
         return user;
