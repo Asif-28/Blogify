@@ -1,5 +1,5 @@
 // import NextAuth from "next-auth"
-import GithubProvider from "next-auth/providers/github"
+import GithubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
 
 // export const authOptions = {
@@ -20,7 +20,6 @@ import GoogleProvider from "next-auth/providers/google";
 
 // export default NextAuth(authOptions)
 
-
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 
@@ -29,10 +28,7 @@ import bcrypt from "bcryptjs";
 import dbConnect from "../../../../config/dbConnect";
 import CreLogin from "@/pages/credentialsLogin";
 
-
-
 export default NextAuth({
-  
   session: {
     strategy: "jwt",
   },
@@ -46,7 +42,6 @@ export default NextAuth({
         const user = await User.findOne({ email });
 
         if (!user) {
-          // console.log("email error")
           throw new Error("Invalid Email");
         }
 
@@ -60,13 +55,13 @@ export default NextAuth({
       },
     }),
     GithubProvider({
-            clientId: process.env.GITHUB_ID,
-            clientSecret: process.env.GITHUB_SECRET,
-          }),
-          GoogleProvider({
-            clientId: process.env.GOOGLE_CLIENT_ID,
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-          }),
+      clientId: process.env.GITHUB_ID,
+      clientSecret: process.env.GITHUB_SECRET,
+    }),
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    }),
   ],
   pages: {
     signIn: "/credentialsLogin",

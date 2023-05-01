@@ -5,7 +5,7 @@ import styles from "./roadmap.module.css";
 import { use, useEffect } from "react";
 
 
-const roadmap = () => {
+const Roadmap = () => {
     return (
         <div id="roadmap" class={styles.section_timeline}>
           <h1
@@ -148,4 +148,4 @@ const roadmap = () => {
       );
 }
 
-export default roadmap
+export default Roadmap;

@@ -1,13 +1,13 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import Head from "next/head";
+import Image from "next/image";
+import { Inter } from "next/font/google";
 
-import Link from 'next/link'
-import { signOut } from 'next-auth/react'
-const inter = Inter({ subsets: ['latin'] })
+import Link from "next/link";
+import { signOut } from "next-auth/react";
+import Roadmap from "./roadmap";
+const inter = Inter({ subsets: ["latin"] });
 
-export default function Home(props) {
-  console.log(props)
+export default function Home() {
   return (
     <>
       <Head>
@@ -16,30 +16,42 @@ export default function Home(props) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-     <main style={{display:"flex", justifyContent:"center", flexDirection:"column", alignItems:"center"}}>
-     <h1>Auth testing</h1>
-     <h2>You are at the home page </h2>
-     <img style={{height:"400px" , width:"400px"}} src={props.res.message} alt="dog-ceo" />
-     
-     <br />
-    {/* <Link style={{padding:"1rem"}} href='./login'><button style={{padding:".6rem" ,fontSize:"1.2rem"}}> Login Page </button></Link> */}
-    <Link href=''><button onClick={signOut} style={{padding:".6rem", fontSize:"1.2rem"}}>Logout </button></Link>
-     </main>
+      <main
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <h1>Auth testing</h1>
+        <h2>You are at the home page </h2>
+        <br />
+
+        <Link href="">
+          <button
+            onClick={signOut}
+            style={{ padding: ".6rem", fontSize: "1.2rem" }}
+          >
+            Logout{" "}
+          </button>
+        </Link>
+      </main>
     </>
-  )
+  );
 }
-// Server side rendering  details 
+// Server side rendering  details
 
-export const getServerSideProps = async (context) =>{
-  const data = await fetch ('https://dog.ceo/api/breeds/image/random');
-const res= await data.json();
-console.log(res);
-return {
-  props:{res}
-}
-}
+// export const getServerSideProps = async (context) => {
+//   const data = await fetch("https://dog.ceo/api/breeds/image/random");
+//   const res = await data.json();
+//   console.log(res);
+//   return {
+//     props: { res },
+//   };
+// };
 
-//  TRIED THIS SECTION WITH  TRY CATCH BLOCK 
+//  TRIED THIS SECTION WITH  TRY CATCH BLOCK
 // export const getServerSideProps = async (context) =>{
 //   try{
 
