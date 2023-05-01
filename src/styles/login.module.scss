@@ -98,3 +98,24 @@ button{
         background-color: #ffd558;
     }   
 }
+
+@media all and (max-width:480px){
+    .main{
+        width: 100%;
+        margin-top: 5rem;
+        color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .form{
+        border-radius: 8px;
+        background-color: #f8f8f8;
+        padding: 1rem 1.7rem 1.5rem 1.7rem;
+    }
+    .loginText{
+        text-align: center;
+        padding-bottom: .6rem;
+        font-size: 2rem;
+    }
+}

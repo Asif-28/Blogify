@@ -11,9 +11,9 @@ const Header = () => {
     <nav className={styles.items}>
         <ul className={styles.item}>
            <Link href={`/ `}><li>Home</li></Link> 
-            <li>About</li>
+            {/* <li>About</li>
             <li>Gallery</li>
-            <li>Blogs</li>
+            <li>Blogs</li> */}
             <Link href='./credentialsLogin'><li>{session?`${session.user.name}`:"Login"}</li></Link>
             
         </ul>
