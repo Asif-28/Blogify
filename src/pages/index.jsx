@@ -21,13 +21,10 @@ export default function Home() {
         }}
       >
         <h1>Auth testing</h1>
-        <h2>You are at the home page </h2>
+        <h2 className="">You are at the home page </h2>
         <br />
         <Link href="">
-          <button
-            onClick={signOut}
-            style={{ padding: ".6rem", fontSize: "1.2rem" }}
-          >
+          <button className="p-4 bg-red-600" onClick={signOut}>
             Logout{" "}
           </button>
         </Link>
