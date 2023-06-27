@@ -15,6 +15,7 @@ const CreLogin = () => {
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [showAlert, setShowAlert] = useState(true);
+
   const handleCloseAlert = () => {
     setShowAlert(false);
   };
@@ -83,7 +84,7 @@ const CreLogin = () => {
               <button type="submit" className={styles.signBtn}>
                 Sign in
               </button>
-              <div style={{ marginTop: "10px" }}>
+              <div className=" mt-2 md:m-3">
                 {errorMessage && showAlert && (
                   <Alert severity="error" onClose={handleCloseAlert}>
                     {errorMessage}

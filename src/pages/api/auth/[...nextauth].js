@@ -14,7 +14,7 @@ export default NextAuth({
   providers: [
     CredentialsProvider({
       async authorize(credentials, req) {
-        await dbConnect();
+        dbConnect();
         const { email, password } = credentials;
         const user = await User.findOne({ email });
         // console.log(user.email, user.password);

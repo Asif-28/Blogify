@@ -25,39 +25,10 @@ export default function Home() {
         <br />
         <Link href="">
           <button className="p-4 bg-red-600" onClick={signOut}>
-            Logout{" "}
+            Logout
           </button>
         </Link>
       </main>
     </>
   );
 }
-// Server side rendering  details
-
-// export const getServerSideProps = async (context) => {
-//   const data = await fetch("https://dog.ceo/api/breeds/image/random");
-//   const res = await data.json();
-//   console.log(res);
-//   return {
-//     props: { res },
-//   };
-// };
-
-//  TRIED THIS SECTION WITH  TRY CATCH BLOCK
-// export const getServerSideProps = async (context) =>{
-//   try{
-
-//     const data = await fetch ('https://dog.ceo/api/breeds/image/random');
-//     if(!response.ok){
-//       throw new Error ('network response is not ok')
-//     }
-//     const res= await data.json();
-//     console.log(res);
-//   }
-//   catch (error) {
-//     console.error('There was a problem fetching the data:', error);
-//   }
-// return {
-//   props:{res}
-// }
-// }
