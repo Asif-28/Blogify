@@ -50,7 +50,7 @@ const Register = () => {
 
   return (
     <div className="flex justify-center items-center mt-20">
-      <div className="bg-slate-50 text-black px-4 sm:px-8 py-2 sm:py-4 rounded-xl">
+      <div className="bg-slate-50 text-black px-4 sm:px-8 py-5 sm:py-4 rounded-xl">
         <div className="flex flex-col gap-10 ">
           <h1 className=" text-4xl sm:text-5xl text-center pt-2 font-thin">
             Register
@@ -67,7 +67,7 @@ const Register = () => {
                 placeholder="John"
                 type="text"
                 id="name_field"
-                className="form-control border-[2px] w-[320px]  sm:w-[380px] px-2 py-1 md:py-[9px] text-gray-600"
+                className="form-control border-[1px] md:border-[2px] w-[320px]  sm:w-[380px] px-2 py-1 md:py-[9px] text-gray-600"
                 value={name}
                 required
                 onChange={(e) => setName(e.target.value)}
@@ -85,7 +85,7 @@ const Register = () => {
                 type="email"
                 placeholder="abc@example.com"
                 id="email_field"
-                className="form-control border-[2px] w-[320px] sm:w-[380px] px-2 py-1 md:py-[9px] text-gray-600"
+                className="form-control border-[1px] md:border-[2px] w-[320px] sm:w-[380px] px-2 py-1 md:py-[9px] text-gray-600"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -103,7 +103,7 @@ const Register = () => {
                 type="password"
                 placeholder="*****"
                 id="password_field"
-                className="form-control border-[2px] w-[320px] sm:w-[380px] px-2 py-1 md:py-[9px] text-gray-600"
+                className="form-control border-[1px] md:border-[2px] w-[320px] sm:w-[380px] px-2 py-1 md:py-[9px] text-gray-600"
                 value={password}
                 required
                 onChange={(e) => setPassword(e.target.value)}
