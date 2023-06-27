@@ -42,17 +42,17 @@ const Header = () => {
         <div className="items flex sm:flex-1 gap-8">
           <div className="flex-1 ">
             <ul className="flex justify-center gap-4 text-[18px] sm:text-[20px] sm:font-normal">
-              <li className="hover:text-[#ffd558]">
+              <li className="hover:text-[#ff7158]">
                 <Link href="/">Home</Link>
               </li>
-              <li className="hover:text-[#ffd558]">
+              <li className="hover:text-[#ff7158]">
                 <Link href="#">Blog</Link>
               </li>
             </ul>
           </div>
           <div className="login  flex-1 text-xl text-[18px] sm:text-[20px] sm:font-normal">
             <Link href="./credentialsLogin">
-              <li className="list-none hover:text-[#ffd558]">
+              <li className="list-none hover:text-[#ff7158]">
                 {session ? `${session.user.name}` : "Login/SignUp"}
               </li>
             </Link>

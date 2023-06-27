@@ -53,6 +53,7 @@ const Register = () => {
       style={{
         backgroundImage: "url('./assets/b.jpg')",
         filter: "brightness(0.9)",
+        overflow: "hidden",
       }}
       className="flex justify-center bg-center bg-cover min-h-[100vh] items-center "
     >
