@@ -49,8 +49,14 @@ const Register = () => {
   };
 
   return (
-    <div className="flex justify-center items-center mt-20">
-      <div className="bg-slate-50 text-black px-4 sm:px-8 py-5 sm:py-4 rounded-xl">
+    <div
+      style={{
+        backgroundImage: "url('./assets/b.jpg')",
+        filter: "brightness(0.9)",
+      }}
+      className="flex justify-center bg-center bg-cover min-h-[100vh] items-center "
+    >
+      <div className="bg-slate-50  text-black px-4 sm:px-8 py-5 sm:py-4 rounded-xl ">
         <div className="flex flex-col gap-10 ">
           <h1 className=" text-4xl sm:text-5xl text-center pt-2 font-thin">
             Register

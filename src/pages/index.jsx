@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { signOut } from "next-auth/react";
+import Hero from "@/comp/Hero";
 
 export default function Home() {
   return (
@@ -12,22 +13,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        <h1>Auth testing</h1>
-        <h2 className="">You are at the home page </h2>
-        <br />
-        <Link href="">
-          <button className="p-4 bg-red-600" onClick={signOut}>
-            Logout
-          </button>
-        </Link>
+      <main>
+        <Hero />
+        <Hero />
       </main>
     </>
   );
