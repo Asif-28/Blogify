@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useState } from "react";
-import styles from "../styles/login.module.scss";
 import { useRouter } from "next/router";
 import { Alert } from "@mui/material";
 const Register = () => {
@@ -23,7 +22,7 @@ const Register = () => {
 
     // Update the validity state
     setValid(isValid);
-    console.log(valid);
+    // console.log(valid);
   };
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -45,56 +44,66 @@ const Register = () => {
       setShowAlert(true);
       setTimeout(() => {
         setShowAlert(false);
-      }, 1000);
+      }, 3000);
     }
   };
 
   return (
-    <div className={styles.main}>
-      <div className={styles.form}>
-        <div className=" ">
+    <div className="flex justify-center items-center mt-20">
+      <div className="bg-slate-50 text-black px-4 sm:px-8 py-2 sm:py-4 rounded-xl">
+        <div className="flex flex-col gap-10 ">
+          <h1 className=" text-4xl sm:text-5xl text-center pt-2 font-thin">
+            Register
+          </h1>
           <form className="" onSubmit={submitHandler}>
-            <h1 className={styles.loginText}>Register</h1>
-
-            <div className={styles.item}>
-              <label className="form-label" htmlFor="name_field">
+            <div className="flex flex-col mb-4">
+              <label
+                className="form-label font-light text-lg m-[5px]"
+                htmlFor="name_field"
+              >
                 Name
               </label>
               <input
                 placeholder="John"
                 type="text"
                 id="name_field"
-                className="form-control"
+                className="form-control border-[2px] w-[320px]  sm:w-[380px] px-2 py-1 md:py-[9px] text-gray-600"
                 value={name}
                 required
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
 
-            <div className={styles.item}>
-              <label className="form-label" htmlFor="email_field">
+            <div className="flex flex-col mb-4">
+              <label
+                className="form-label font-light text-lg m-[5px]"
+                htmlFor="email_field"
+              >
                 Email address
               </label>
               <input
                 type="email"
                 placeholder="abc@example.com"
                 id="email_field"
-                className="form-control"
+                className="form-control border-[2px] w-[320px] sm:w-[380px] px-2 py-1 md:py-[9px] text-gray-600"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
             </div>
 
-            <div className={styles.item}>
-              <label className="form-label" htmlFor="password_field">
+            <div className="flex flex-col mb-4">
+              <label
+                className="form-label font-light text-lg m-[5px]"
+                htmlFor="password_field"
+              >
                 Password
               </label>
               <input
                 type="password"
                 placeholder="*****"
                 id="password_field"
-                className="form-control"
+                className="form-control border-[2px] w-[320px] sm:w-[380px] px-2 py-1 md:py-[9px] text-gray-600"
                 value={password}
                 required
                 onChange={(e) => setPassword(e.target.value)}
@@ -104,13 +113,13 @@ const Register = () => {
             <button
               type="submit"
               onClick={validatePassword}
-              className={styles.regBtn}
+              className="px-3 py-2 text-lg font-light hover:bg-[#ffd558] bg-[#f5e8c2]"
             >
               Register
             </button>
             {errorMessage && showAlert && (
               <Alert
-                className="m-2 md:m-3"
+                className="m-2 md:m-3 "
                 severity="error"
                 onClose={handleCloseAlert}
               >
