@@ -4,11 +4,20 @@ import React from "react";
 const Hero = () => {
   return (
     <main>
-      <div className="bg-[url('../../public/assets/b.jpg')] bg-center bg-cover min-h-[100vh] brightness-50 relative"></div>
-      <div className="detail absolute top-[70%] left-[10%] sm:left-[15%] md:left-[35%] items flex flex-col items-center gap-5 ">
+      <div className="bg-[#fdef32] text-black flex items-start flex-col gap-6 sm:gap-10 min-h-[70vh] justify-center pl-2 sm:pl-28 ">
+        <h1 className="text-6xl sm:text-8xl">Stay Curious.</h1>
+        <div className="details text-[18px] sm:text-2xl tracking-wider">
+          <p className="">Discover new stories ,thinking ,exciting blogs</p>
+          <p>Post your own blog</p>
+        </div>
+        <div className="btn text-[14px] sm:text-base text-white hover:text-[#fdef32] font-light bg-black px-3 py-2 sm:px-5 sm:py-3">
+          Explore About Us
+        </div>
+      </div>
+      <div className="text-center mt-[5%] sm:mt-[3%] flex flex-col items-center gap-5 sm:gap-8">
         <input
           type="text"
-          className="py-2 sm:py-3 pl-4 border-none pr-4 w-[300px] sm:min-w-[400px] text-black rounded-full font-light text-center"
+          className="py-2 sm:py-3 pl-4 border-none pr-4 w-[300px] sm:min-w-[400px] text-black rounded-full font-light text-center "
           placeholder="Share Your Views with Us!! "
         />
         <div className="btn">

@@ -37,23 +37,23 @@ const Header = () => {
   }, []);
   return (
     <div className={`nav ${show && `nav__black`}`}>
-      <div className="container flex gap-8 sm:gap-0">
+      <div className="container flex gap-8 sm:gap-0 text-black ">
         <div className="logo sm:flex-1 text-2xl sm:text-2xl ">Logo</div>
         <div className="items flex sm:flex-1 gap-8">
           <div className="flex-1 ">
-            <ul className="flex justify-center gap-4 text-[18px] sm:text-[20px] sm:font-normal">
-              <li className="hover:text-[#ff7158]">
+            <ul className="flex justify-center gap-4 text-[18px] sm:text-[20px] sm:font-normal ">
+              <li className="hover:text-[#ff3636] font-light">
                 <Link href="/">Home</Link>
               </li>
-              <li className="hover:text-[#ff7158]">
+              <li className="hover:text-[#ff3636] font-light">
                 <Link href="#">Blog</Link>
               </li>
             </ul>
           </div>
-          <div className="login  flex-1 text-xl text-[18px] sm:text-[20px] sm:font-normal">
+          <div className="login flex-1 text-xl text-[18px] sm:text-[20px] sm:font-normal">
             <Link href="./credentialsLogin">
-              <li className="list-none hover:text-[#ff7158]">
-                {session ? `${session.user.name}` : "Login/SignUp"}
+              <li className="list-none hover:text-[#ff3636] font-light ">
+                {session ? `${session.user.name}` : "Login"}
               </li>
             </Link>
           </div>
