@@ -37,20 +37,23 @@ const Header = () => {
   }, []);
   return (
     <div className={`nav ${show && `nav__black`}`}>
-      <div className="container flex gap-8 sm:gap-0 text-black ">
+      <div className="container justify-between px-3 sm:px-6 flex gap-8 sm:gap-0 text-black max-w-[1280px] mx-auto">
         <div className="logo sm:flex-1 text-2xl sm:text-2xl ">Logo</div>
-        <div className="items flex sm:flex-1 gap-8">
+        <div className="flex sm:flex-1 gap-8 ">
           <div className="flex-1 ">
-            <ul className="flex justify-center gap-4 text-[18px] sm:text-[20px] sm:font-normal ">
+            <ul className="flex justify-center gap-2 sm:gap-4 text-[17px] sm:text-[20px] sm:font-normal ">
               <li className="hover:text-[#ff3636] font-light">
                 <Link href="/">Home</Link>
               </li>
               <li className="hover:text-[#ff3636] font-light">
                 <Link href="#">Blog</Link>
               </li>
+              <li className="hover:text-[#ff3636] font-light">
+                <Link href="#">Contact</Link>
+              </li>
             </ul>
           </div>
-          <div className="login flex-1 text-xl text-[18px] sm:text-[20px] sm:font-normal">
+          <div className="login flex-2 text-[17px] sm:text-[20px] sm:font-normal">
             <Link href="./credentialsLogin">
               <li className="list-none hover:text-[#ff3636] font-light ">
                 {session ? `${session.user.name}` : "Login"}
