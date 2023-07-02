@@ -1,6 +1,8 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+import axios from "axios";
+import { toast } from "react-hot-toast";
 import styles from "../styles/login.module.scss";
 
 import { signIn, useSession } from "next-auth/react";
@@ -38,6 +40,19 @@ const CreLogin = () => {
       console.log(error);
     }
   };
+  // const onLogin = async (e) => {
+  //   try {
+  //     e.preventDefault();
+  //     const { data } = await axios.post("/api/login", { email, password });
+  //     console.log("Login success", data);
+  //     toast.success("Login success");
+  //     router.push("/");
+  //   } catch (error) {
+  //     console.log("Login failed", error.message);
+  //     toast.error(error.message);
+  //   } finally {
+  //   }
+  // };
   const handleGoogleLogin = async () => {
     await signIn("google");
   };
@@ -59,6 +74,7 @@ const CreLogin = () => {
                   Email address
                 </label>
                 <input
+                  required
                   type="email"
                   placeholder="abc@example.com"
                   id="email_field"
@@ -74,6 +90,7 @@ const CreLogin = () => {
                 <input
                   type="password"
                   placeholder="******"
+                  required
                   id="password_field"
                   className="form-control"
                   value={password}
@@ -81,7 +98,11 @@ const CreLogin = () => {
                 />
               </div>
 
-              <button type="submit" className={styles.signBtn}>
+              <button
+                // onClick={onLogin}
+                type="submit"
+                className={styles.signBtn}
+              >
                 Sign in
               </button>
               <div className=" mt-2 md:m-3">

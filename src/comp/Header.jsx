@@ -59,7 +59,7 @@ const Header = () => {
             </ul>
           </div>
           <div className="login flex-2 text-[17px] sm:text-[20px] sm:font-normal">
-            <Link href="./credentialsLogin">
+            <Link href="./login">
               <li className="list-none hover:text-[#ff3636] font-light ">
                 {session ? <Logout /> : "Login"}
               </li>

@@ -4,13 +4,13 @@ import React from "react";
 const Hero = () => {
   return (
     <main>
-      <div className="bg-[#fdef32] text-black flex items-start flex-col gap-6 sm:gap-10 min-h-[70vh] justify-center px-5   sm:pl-28 ">
+      <div className="bg-[#fbe02f] text-black flex items-start flex-col gap-6 sm:gap-10 min-h-[70vh] justify-center px-5   sm:pl-28 ">
         <h1 className="text-6xl sm:text-8xl">Stay Curious.</h1>
         <div className="details text-[18px] sm:text-2xl tracking-wider">
           <p className="">Discover new stories,thinking,exciting blogs</p>
           <p>Post your own blog</p>
         </div>
-        <div className="btn text-[14px] sm:text-base text-white hover:text-[#fdef32] font-light bg-black px-3 py-2 sm:px-5 sm:py-3">
+        <div className="btn text-[14px] sm:text-base text-white hover:text-[#fbe02f] font-light bg-black px-3 py-2 sm:px-5 sm:py-3">
           Explore About Us
         </div>
       </div>
@@ -21,7 +21,7 @@ const Hero = () => {
           placeholder="Share Your Views with Us!! "
         />
         <div className="btn">
-          <button className="bg-[#fdef32] whitespace-nowrap text-lg sm:text-xl text-black py-3 sm:py-4 px-8 sm:px-12 rounded-full  font-normal">
+          <button className="bg-[#fbe02f] whitespace-nowrap text-lg sm:text-xl text-black py-3 sm:py-4 px-8 sm:px-12 rounded-full  font-normal">
             Get Started
           </button>
         </div>

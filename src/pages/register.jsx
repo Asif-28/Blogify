@@ -34,7 +34,7 @@ const Register = () => {
           password,
         });
 
-        console.log(data);
+        console.log("register success", data);
         router.push("/");
       } catch (error) {
         console.log(error);
