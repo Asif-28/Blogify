@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
+// import Logout from "./Logout";
 
 // const Header = () => {
 //   const { data: session } = useSession();
@@ -20,6 +21,9 @@ import { useSession } from "next-auth/react";
 //     </main>
 //   );
 // };
+const Logout = () => {
+  return <button onClick={signOut}>Logout</button>;
+};
 
 const Header = () => {
   const [show, handleShow] = useState(false);
@@ -31,13 +35,14 @@ const Header = () => {
       handleShow(false);
     }
   };
+
   useEffect(() => {
     window.addEventListener("scroll", transitionNavBar);
     return () => window.removeEventListener("scroll", transitionNavBar);
   }, []);
   return (
     <div className={`nav ${show && `nav__black`}`}>
-      <div className="container justify-between px-3 sm:px-6 flex gap-8 sm:gap-0 text-black max-w-[1280px] mx-auto">
+      <div className="container justify-between px-3 sm:px-6 flex  text-black max-w-[1280px] mx-auto">
         <div className="logo sm:flex-1 text-2xl sm:text-2xl ">Logo</div>
         <div className="flex sm:flex-1 gap-8 ">
           <div className="flex-1 ">
@@ -56,7 +61,7 @@ const Header = () => {
           <div className="login flex-2 text-[17px] sm:text-[20px] sm:font-normal">
             <Link href="./credentialsLogin">
               <li className="list-none hover:text-[#ff3636] font-light ">
-                {session ? `${session.user.name}` : "Login"}
+                {session ? <Logout /> : "Login"}
               </li>
             </Link>
           </div>
