@@ -21,7 +21,7 @@ const CreLogin = () => {
   const handleCloseAlert = () => {
     setShowAlert(false);
   };
-
+  // LOGIN THOROUGH THE SESSIONS PROVIDED BY THE NEXT-AUTH
   const submitHandler = async (e) => {
     e.preventDefault();
     try {
@@ -43,14 +43,16 @@ const CreLogin = () => {
   // const onLogin = async (e) => {
   //   try {
   //     e.preventDefault();
-  //     const { data } = await axios.post("/api/login", { email, password });
+  //     const { data } = await axios.post("/api/login", {
+  //       email,
+  //       password,
+  //     });
   //     console.log("Login success", data);
-  //     toast.success("Login success");
+  //     // toast.success("Login success");
   //     router.push("/");
   //   } catch (error) {
-  //     console.log("Login failed", error.message);
+  //     console.log("Login failed from frontend", error);
   //     toast.error(error.message);
-  //   } finally {
   //   }
   // };
   const handleGoogleLogin = async () => {

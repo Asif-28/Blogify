@@ -10,6 +10,7 @@ import dbConnect from "../../../../config/dbConnect";
 export default NextAuth({
   session: {
     strategy: "jwt",
+    maxAge: 302400,
   },
   providers: [
     CredentialsProvider({
