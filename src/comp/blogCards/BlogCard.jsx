@@ -12,7 +12,7 @@ const BlogCard = () => {
         </div>
         <div className="content p-[1.5rem] ">
           <h3 className="text-[1.5rem] font-light overflow-hidden leading-6 ">
-            Making Visual Vocal: SceneXplain's Impact on
+            Making Visual Vocal: Scene Explains Impact on
           </h3>
           <p className="mt-[1.5rem] text-[.875rem] ">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae
