@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { signOut } from "next-auth/react";
 import Hero from "@/comp/Hero";
-import BlogCard from "@/comp/blogCards/BlogCard";
+import BlogCards from "@/comp/blogCards/BlogCards";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
       </Head>
       <main>
         <Hero />
-        <BlogCard />
+        <BlogCards />
       </main>
     </>
   );
