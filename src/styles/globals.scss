@@ -22,7 +22,15 @@ a {
   box-sizing: border-box;
 }
 body {
-  background-color: black;
+  // background-color: #122121;
+  // background-color: #0a0a0a;
+  background-color: #141414; //good
+  // background-color: #1d1e1f;
+  // background-color: #e5eaf3;//text color
+  // background-color: #cfd3dc; secondary text color
+  // background-color: #8d9095; placehonder color
+  // background-color: #f56c6c;
+
   color: #fff;
   // max-width: 1280px;
   // margin: 0 auto;
@@ -39,5 +47,7 @@ body {
 }
 .nav__black {
   background-color: rgb(222, 179, 7);
-  color: black;
+  // background: transparent;
+  // opacity: 20%;
+  color: #000;
 }

@@ -28,7 +28,7 @@ export default NextAuth({
         if (!isPasswordMatched) {
           throw new Error("Invalid Password");
         }
-
+        // console.log(req.body);
         return user;
       },
     }),
