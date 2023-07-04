@@ -5,9 +5,13 @@ const BlogCard = ({ img, title, desc, authImg, author, date }) => {
     <div className="max-w-[1280px]  mx-auto mb-[20px]">
       <div className="card max-w-[410px] mb-[1rem] sm:mb-[1.5rem] bg-[#1d1e1f] rounded-md flex flex-col overflow-clip justify-center border border-[##e5eaf3] mx-2 ">
         <div className="img">
-          <img src={img} alt="blog-img" />
+          <img
+            src={img}
+            alt="blog-img"
+            className="max-h-[230px] w-[100%] object-cover"
+          />
         </div>
-        <div className="content p-[1.5rem] overflow-hidden">
+        <div className="content p-[1.5rem] max-h-[230px]">
           <h3 className="text-[1.5rem] font-light overflow-hidden leading-6 ">
             {title}
           </h3>

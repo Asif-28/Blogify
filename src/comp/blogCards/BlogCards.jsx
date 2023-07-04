@@ -12,7 +12,7 @@ const data = [
   },
   {
     id: 2,
-    img: "https://jina-ai-gmbh.ghost.io/content/images/2023/06/Blog-images--9-.png",
+    img: "https://images.unsplash.com/photo-1682687981907-170c006e3744?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
     title: "Making Visual Vocal: SceneXplain's Impact on",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius maxim   venenatis velit vel aug tellus et just aliquet sed diam et inter parturient",
     authImg: "https://jina-ai-gmbh.ghost.io/content/images/2022/09/alex.jpg",
