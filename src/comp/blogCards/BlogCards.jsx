@@ -64,7 +64,7 @@ const BlogCards = () => {
   return (
     <div className="container max-w-[1300px] mx-auto">
       <h2 className="text-[2.5rem] text-center py-2 mt-7">Trending</h2>
-      <div className="grid sm:grid-cols-3 gap-1 ">
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-1 ">
         {data.map((item) => {
           return (
             <BlogCard
