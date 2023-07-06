@@ -46,8 +46,9 @@ body {
   transition: all 0.5s;
 }
 .nav__black {
-  background-color: rgb(222, 179, 7);
+  background-color: #000000;
   // background: transparent;
   // opacity: 20%;
-  color: #000;
+  color: #fff;
+  // filter: brightness(30%);
 }
