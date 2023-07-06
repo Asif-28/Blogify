@@ -46,21 +46,21 @@ const Header = () => {
         <div className="logo sm:flex-1 text-2xl sm:text-2xl ">Logo</div>
         <div className="flex sm:flex-1 gap-8 ">
           <div className="flex-1 ">
-            <ul className="flex justify-center gap-2 sm:gap-4 text-[17px] sm:text-[20px] sm:font-normal ">
-              <li className="hover:text-[#ff3636] font-light">
+            <ul className="flex justify-center gap-2 sm:gap-6 text-[17px] sm:text-[20px] sm:font-normal ">
+              <li className="sm:hover:border sm:hover-border-[#e5eaf3] sm:px-[0.4rem] font-light ">
                 <Link href="/">Home</Link>
               </li>
-              <li className="hover:text-[#ff3636] font-light">
+              <li className="sm:hover:border sm:hover-border-[#e5eaf3] sm:px-[0.4rem] font-light">
                 <Link href="#">Blog</Link>
               </li>
-              <li className="hover:text-[#ff3636] font-light">
+              <li className="sm:hover:border sm:hover-border-[#e5eaf3] sm:px-[0.4rem] font-light">
                 <Link href="#">Contact</Link>
               </li>
             </ul>
           </div>
           <div className="login flex-2 text-[17px] sm:text-[20px] sm:font-normal">
             <Link href="./login">
-              <li className="list-none hover:text-[#ff3636] font-light ">
+              <li className="list-none font-light border px-[0.2rem] sm:border-[#fff] sm:px-[0.4rem]">
                 {session ? <Logout /> : "Login"}
               </li>
             </Link>
