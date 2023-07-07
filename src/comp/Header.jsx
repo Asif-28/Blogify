@@ -47,13 +47,13 @@ const Header = () => {
         <div className="flex sm:flex-1 gap-8 ">
           <div className="flex-1 ">
             <ul className="flex justify-center gap-2 sm:gap-6 text-[17px] sm:text-[20px] sm:font-normal ">
-              <li className="sm:hover:border sm:hover-border-[#e5eaf3] sm:px-[0.4rem] font-light ">
+              <li className="sm:hover:border sm:hover-border-[#e5eaf3] sm:px-[0.4rem] font-light sm:w-[70px] sm:text-center">
                 <Link href="/">Home</Link>
               </li>
-              <li className="sm:hover:border sm:hover-border-[#e5eaf3] sm:px-[0.4rem] font-light">
+              <li className="sm:hover:border sm:hover-border-[#e5eaf3] sm:px-[0.4rem] font-light sm:w-[60px] sm:text-center">
                 <Link href="#">Blog</Link>
               </li>
-              <li className="sm:hover:border sm:hover-border-[#e5eaf3] sm:px-[0.4rem] font-light">
+              <li className="sm:hover:border sm:hover-border-[#e5eaf3] sm:px-[0.4rem] font-light sm:w-[90px] sm:text-center">
                 <Link href="#">Contact</Link>
               </li>
             </ul>
