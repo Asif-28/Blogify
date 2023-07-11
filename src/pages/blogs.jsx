@@ -52,7 +52,7 @@ const Blogs = () => {
             </h1>
             <p className="">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum cum
-              odit totam ea quia dignissimos enim rem at illum corporis.
+              odit totam ea quia dignissimos enim rem at illum corporissf.
             </p>
           </div>
           <div className="right">
