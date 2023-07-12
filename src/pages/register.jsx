@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { Alert } from "@mui/material";
+import Link from "next/link";
 const Register = () => {
   const router = useRouter();
   const [name, setName] = useState("");
@@ -116,14 +117,24 @@ const Register = () => {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
+            <div className="btn flex gap-4 ">
+              <button
+                type="submit"
+                onClick={validatePassword}
+                className="min-w-[80px] px-3 py-2 text-lg font-light hover:bg-[#ffd558] bg-[#f5e8c2]"
+              >
+                Register
+              </button>
+              <Link href="./login">
+                <button
+                  type="submit"
+                  className="min-w-[80px] px-3 py-2 text-lg font-light hover:bg-[#ffd558] bg-[#f5e8c2]"
+                >
+                  Login
+                </button>
+              </Link>
+            </div>
 
-            <button
-              type="submit"
-              onClick={validatePassword}
-              className="px-3 py-2 text-lg font-light hover:bg-[#ffd558] bg-[#f5e8c2]"
-            >
-              Register
-            </button>
             {errorMessage && showAlert && (
               <Alert
                 className="m-2 md:m-3 "

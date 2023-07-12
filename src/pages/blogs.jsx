@@ -47,7 +47,7 @@ const Blogs = () => {
         <div className="article flex gap-4 bg-[#0a0a0a] p-4 rounded-xl mt-[.5rem]">
           <div className="left pr-12">
             <h1 className="text-2xl ">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam,
+              Lorem ipsum dolor sit amet annn consectetur, adipisicing elit. Totam,
               rem.
             </h1>
             <p className="">
