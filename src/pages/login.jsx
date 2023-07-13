@@ -66,13 +66,18 @@ const CreLogin = () => {
     router.push("/");
   } else {
     return (
-      <div className={styles.main}>
-        <div className={styles.form}>
-          <div className="">
+      <div className="flex justify-center items-center min-h-[100vh]">
+        <div className="bg-slate-50 text-black px-4 sm:px-8 py-5 sm:py-4 rounded-xl">
+          <div className="flex flex-col gap-10 ">
             <form onSubmit={submitHandler}>
-              <h1 className={styles.loginText}>Login</h1>
-              <div className={styles.item}>
-                <label className="form-label" htmlFor="email_field">
+              <h1 className="text-4xl sm:text-5xl text-center pt-2 font-thin md:mb-6">
+                Login
+              </h1>
+              <div className="flex flex-col mb-4">
+                <label
+                  className="form-label font-light text-lg m-[5px]"
+                  htmlFor="email_field"
+                >
                   Email address
                 </label>
                 <input
@@ -80,33 +85,43 @@ const CreLogin = () => {
                   type="email"
                   placeholder="abc@example.com"
                   id="email_field"
-                  className="form-control"
+                  className="form-control form-control border-[1px] md:border-[2px] w-[320px]  sm:w-[380px] px-2 py-1 md:py-[9px] text-gray-600"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
-              <div className={styles.item}>
-                <label className="form-label" htmlFor="password_field">
+              <div className="flex flex-col mb-4">
+                <label
+                  className="form-label font-light text-lg m-[5px]"
+                  htmlFor="password_field"
+                >
                   Password
                 </label>
                 <input
                   type="password"
                   placeholder="******"
                   required
-                  id="password_field"
-                  className="form-control"
+                  id="password_field "
+                  className="form-control border-[1px] md:border-[2px] w-[320px] sm:w-[380px] px-2 py-1 md:py-[9px] text-gray-600"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
+              <div className="btn flex gap-3">
+                <button
+                  // onClick={onLogin}
+                  type="submit"
+                  className="min-w-[80px] px-3 py-2 text-lg font-light hover:bg-[#ffd558] bg-[#f5e8c2]"
+                >
+                  Sign in
+                </button>
+                <Link href="./register">
+                  <button className="min-w-[80px] px-3 py-2 text-lg font-light hover:bg-[#ffd558] bg-[#f5e8c2]">
+                    Register
+                  </button>
+                </Link>
+              </div>
 
-              <button
-                // onClick={onLogin}
-                type="submit"
-                className={styles.signBtn}
-              >
-                Sign in
-              </button>
               <div className=" mt-2 md:m-3">
                 {errorMessage && showAlert && (
                   <Alert severity="error" onClose={handleCloseAlert}>
@@ -124,12 +139,18 @@ const CreLogin = () => {
               </div>
             </form>
           </div>
-          <div className={styles.btnCont}>
-            <button onClick={handleGoogleLogin}>
+          <div className="flex justify-center items-center gap-4 mt-2 sm:pb-5">
+            <button
+              className="hover:bg-[#ffd558] bg-[#f5e8c2] px-3 py-2  flex justify-center gap-1 text-xl font-light"
+              onClick={handleGoogleLogin}
+            >
               <GoogleIcon />
               Google
             </button>
-            <button className="" onClick={handleGithubLogin}>
+            <button
+              className="hover:bg-[#ffd558] bg-[#f5e8c2] px-3 py-2 flex justify-center gap-1 text-xl font-light"
+              onClick={handleGithubLogin}
+            >
               <GitHub />
               Github
             </button>
