@@ -90,7 +90,7 @@ const CreLogin = () => {
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
-              <div className="flex flex-col mb-4">
+              <div className="flex flex-col mb-6">
                 <label
                   className="form-label font-light text-lg m-[5px]"
                   htmlFor="password_field"
@@ -111,12 +111,12 @@ const CreLogin = () => {
                 <button
                   // onClick={onLogin}
                   type="submit"
-                  className="min-w-[80px] px-3 py-2 text-lg font-light hover:bg-[#ffd558] bg-[#f5e8c2]"
+                  className="min-w-[80px] px-3 py-2 sm:text-lg font-light hover:bg-[#ffd558] bg-[#f5e8c2]"
                 >
                   Sign in
                 </button>
                 <Link href="./register">
-                  <button className="min-w-[80px] px-3 py-2 text-lg font-light hover:bg-[#ffd558] bg-[#f5e8c2]">
+                  <button className="min-w-[80px] px-3 py-2 sm:text-lg font-light hover:bg-[#ffd558] bg-[#f5e8c2]">
                     Register
                   </button>
                 </Link>
@@ -141,14 +141,14 @@ const CreLogin = () => {
           </div>
           <div className="flex justify-center items-center gap-4 mt-2 sm:pb-5">
             <button
-              className="hover:bg-[#ffd558] bg-[#f5e8c2] px-3 py-2  flex justify-center gap-1 text-xl font-light"
+              className="hover:bg-[#ffd558] bg-[#f5e8c2] px-3 py-2  flex justify-center gap-1 sm:text-xl font-light"
               onClick={handleGoogleLogin}
             >
               <GoogleIcon />
               Google
             </button>
             <button
-              className="hover:bg-[#ffd558] bg-[#f5e8c2] px-3 py-2 flex justify-center gap-1 text-xl font-light"
+              className="hover:bg-[#ffd558] bg-[#f5e8c2] px-3 py-2 flex justify-center gap-1 sm:text-xl font-light"
               onClick={handleGithubLogin}
             >
               <GitHub />
