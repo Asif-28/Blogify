@@ -4,6 +4,7 @@ import Link from "next/link";
 import { signOut } from "next-auth/react";
 import Hero from "@/comp/Hero";
 import BlogCards from "@/comp/blogCards/BlogCards";
+import Footer from "@/comp/Footer";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <main>
         <Hero />
         <BlogCards />
+        <Footer />
       </main>
     </>
   );
