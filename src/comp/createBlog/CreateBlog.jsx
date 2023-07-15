@@ -3,7 +3,7 @@ import { useSession } from "next-auth/react";
 
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-const CreateBlog = ({ name }) => {
+const CreateBlog = ({ author }) => {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [image, setImage] = useState(null);
@@ -18,6 +18,7 @@ const CreateBlog = ({ name }) => {
         title,
         desc,
         // image,
+        author,
       });
 
       console.log("register success", data);

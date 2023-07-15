@@ -7,11 +7,11 @@ const MyBlogs = () => {
 
   if (session) {
     const { user } = session;
-
-    console.log(user);
+    const name = user.name;
+    // console.log(user);
     return (
       <div>
-        <CreateBlog name={"asif"} />
+        <CreateBlog author={name} />
       </div>
     );
   } else {

@@ -16,7 +16,9 @@ const Footer = () => {
           <Link href="./blogs">
             <h3 className="font-light">Blog</h3>
           </Link>
-          <h3 className="blog font-light">Create your Blog</h3>
+          <Link href="./myBlogs">
+            <h3 className="blog font-light">Create your Blog</h3>
+          </Link>
         </div>
         <div className="flex-1 flex flex-col gap-1 cursor-pointer mb-4 sm:mb-0">
           <h2 className=" text-xl sm:mb-2">Contact Us</h2>

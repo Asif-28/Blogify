@@ -16,6 +16,10 @@ const BlogSchema = new Schema({
   //     type: String,
   //     required: true,
   //   },
+  author: {
+    type: String,
+    required: true,
+  },
 });
 
 // Create the model from the schema
