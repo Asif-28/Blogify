@@ -1,17 +1,25 @@
 import Image from "next/image";
 import React from "react";
+import SliderImg from "./SliderImg";
 
 const Hero = () => {
   return (
     <main>
-      <div className="bg-[#009191]  flex items-start flex-col gap-6 sm:gap-10 min-h-[65vh] sm:min-h-[70vh] justify-center px-5   sm:pl-28 ">
-        <h1 className="text-6xl sm:text-8xl">Stay Curious.</h1>
-        <div className="details text-[18px] sm:text-2xl tracking-wider ">
-          <p className="">Discover new stories,thinking,exciting blogs</p>
-          <p>Post your own blog</p>
-        </div>
-        <div className="btn text-[14px] sm:text-base text-white hover:text-[#009191] font-light bg-[#141414] px-3 py-2 sm:px-5 sm:py-3">
-          Explore About Us
+      <div className="wrapper ">
+        <div className=" bg-[#009191]  flex md:justify-evenly md:items-center sm:min-h-[80vh]  items-start flex-col md:flex-row gap-6 sm:gap-10 min-h-[65vh]  justify-center px-5  ">
+          <div className="left flex flex-col justify-center items-start gap-6 sm:gap-10">
+            <h1 className="text-6xl sm:text-8xl">Stay Curious.</h1>
+            <div className="details text-[18px] sm:text-2xl tracking-wider ">
+              <p className="">Discover new stories,thinking,exciting blogs</p>
+              <p>Post your own blog</p>
+            </div>
+            <div className="btn text-[14px] sm:text-base text-white hover:text-[#009191] font-light bg-[#141414] px-3 py-2 sm:px-5 sm:py-3">
+              Explore About Us
+            </div>
+          </div>
+          <div className="right hidden md:block">
+            <SliderImg />
+          </div>
         </div>
       </div>
       <div className="text-center mt-[5%] sm:mt-[3%] flex flex-col items-center gap-5 sm:gap-8">

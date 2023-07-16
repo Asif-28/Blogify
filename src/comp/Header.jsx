@@ -42,7 +42,7 @@ const Header = () => {
   }, []);
   return (
     <div className={`nav ${show && `nav__black`}`}>
-      <div className="container justify-between px-3  sm:px-6 flex max-w-[1280px] mx-auto">
+      <div className="container justify-between px-3  sm:px-6 flex max-w-[1280px] mx-auto ">
         <div className="logo sm:flex-1 text-2xl sm:text-2xl ">Logo</div>
         <div className="flex sm:flex-1 gap-8 ">
           <div className="flex-1 ">

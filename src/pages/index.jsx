@@ -6,6 +6,7 @@ import Hero from "@/comp/Hero";
 import BlogCards from "@/comp/blogCards/BlogCards";
 import Footer from "@/comp/Footer";
 import BloggerPosts from "@/comp/blogCards/ApiData";
+import SliderImg from "@/comp/SliderImg";
 
 export default function Home() {
   return (
