@@ -7,7 +7,7 @@ dbConnect();
 export default async function handler(req, res) {
   if (req.method == "POST") {
     // dbConnect();
-    const { title, desc, author } = req.body;
+    const { title, desc, author, imageUrl } = req.body;
     console.log(req.body);
     const user = await Blog.findOne({ title });
     if (user) {
@@ -17,7 +17,7 @@ export default async function handler(req, res) {
     const newBlog = new Blog({
       title,
       desc,
-      //   image,
+      imageUrl,
       author,
     });
     console.log(title, desc);

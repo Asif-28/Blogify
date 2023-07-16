@@ -4,20 +4,23 @@ import { useSession } from "next-auth/react";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 const CreateBlog = ({ author }) => {
+  const CLOUD_NAME = "dakd8y8gh";
+  const UPLOAD_PRESET = "my_blog_project_asif";
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [image, setImage] = useState(null);
   const { data: session } = useSession;
   //   console.log(name);
-  const router = useRouter();
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
+      const imageUrl = await uploadImage();
+      console.log(imageUrl);
       const { data } = await axios.post("/api/blog", {
         title,
         desc,
-        // image,
+        imageUrl,
         author,
       });
 
@@ -26,6 +29,28 @@ const CreateBlog = ({ author }) => {
       console.log(error);
     }
   };
+  const uploadImage = async () => {
+    if (!image) return;
+    const formData = new FormData();
+    formData.append("file", image);
+    formData.append("upload_preset", UPLOAD_PRESET);
+    try {
+      const res = await fetch(
+        `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`,
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+      const data = await res.json();
+      const imageUrl = data["secure_url"];
+      console.log(imageUrl);
+      return imageUrl;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const router = useRouter();
 
   return (
     <div>
