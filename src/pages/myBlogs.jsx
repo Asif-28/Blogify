@@ -1,3 +1,4 @@
+"use client";
 import CreateBlog from "@/comp/createBlog/CreateBlog";
 import { useSession } from "next-auth/react";
 import React from "react";
