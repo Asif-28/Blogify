@@ -63,7 +63,7 @@ const CreLogin = () => {
   };
 
   if (session) {
-    console.log(session);
+    // console.log(session);
     router.push("/");
   } else {
     return (
