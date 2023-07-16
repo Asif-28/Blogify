@@ -16,7 +16,6 @@ const MyBlogs = () => {
     );
   } else {
     router.push("./login");
-    return;
   }
 };
 
