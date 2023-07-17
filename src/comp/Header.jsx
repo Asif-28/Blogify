@@ -43,7 +43,9 @@ const Header = () => {
   return (
     <div className={`nav ${show && `nav__black`}`}>
       <div className="container justify-between px-3  sm:px-6 flex max-w-[1280px] mx-auto ">
-        <div className="logo sm:flex-1 text-2xl sm:text-2xl ">Logo</div>
+        <div className="logo sm:flex-1 text-2xl sm:text-2xl ">
+          <img src="./assets/logo1.svg" className="h-[40px] w-[100px]" alt="" />
+        </div>
         <div className="flex sm:flex-1 gap-8 ">
           <div className="flex-1 ">
             <ul className="flex justify-center gap-2 sm:gap-6 text-[17px] sm:text-[20px] sm:font-normal ">

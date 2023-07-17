@@ -1,20 +1,32 @@
 import Image from "next/image";
 import React from "react";
 import SliderImg from "./SliderImg";
+import Link from "next/link";
 
 const Hero = () => {
   return (
     <main>
       <div className="wrapper ">
-        <div className=" bg-[#009191]  flex md:justify-evenly md:items-center sm:min-h-[80vh]  items-start flex-col md:flex-row gap-6 sm:gap-10 min-h-[65vh]  justify-center px-5  ">
-          <div className="left flex flex-col justify-center items-start gap-6 sm:gap-10">
-            <h1 className="text-6xl sm:text-8xl">Stay Curious.</h1>
+        <div className=" bg-[#009191]  flex md:justify-evenly md:items-center sm:min-h-[80vh]  items-start flex-col md:flex-row gap-6 sm:gap-10 min-h-[75vh]  justify-center px-5  ">
+          <div className="left flex flex-col justify-center items-start gap-6 sm:gap-10 mt-10 sm:mt-0">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl ">
+              Continue Exploring
+            </h1>
             <div className="details text-[18px] sm:text-2xl tracking-wider ">
-              <p className="">Discover new stories,thinking,exciting blogs</p>
-              <p>Post your own blog</p>
+              <p className="font-light">
+                Discover new stories,thinking,exciting blogs
+              </p>
+              <p className="font-light">Post your own blog</p>
             </div>
-            <div className="btn text-[14px] sm:text-base text-white hover:text-[#009191] font-light bg-[#141414] px-3 py-2 sm:px-5 sm:py-3">
-              Explore About Us
+            <div className="btn flex flex-col gap-3">
+              <div className="btn text-[14px] sm:text-base text-white hover:text-[#009191] font-light bg-[#141414] px-3 py-2 sm:px-5 sm:py-3">
+                Explore About Us
+              </div>
+              <Link href="./myBlogs">
+                <div className="btn text-[14px] sm:text-base text-white hover:text-[#009191] font-light bg-[#141414] px-3 py-2 sm:px-5 sm:py-3">
+                  Create Your Own Story
+                </div>
+              </Link>
             </div>
           </div>
           <div className="right hidden md:block">
@@ -29,9 +41,11 @@ const Hero = () => {
           placeholder="Share Your Views with Us!! "
         />
         <div className="btn">
-          <button className="bg-[#009191] bg-transparent border border-[#009191]  whitespace-nowrap text-lg sm:text-xl py-3 sm:py-4 px-8 sm:px-12 rounded-full  font-normal text-[#e5eaf3]">
-            Get Started
-          </button>
+          <Link href="./login">
+            <button className="bg-[#009191] bg-transparent border border-[#009191]  whitespace-nowrap text-lg sm:text-xl py-3 sm:py-4 px-8 sm:px-12 rounded-full  font-normal text-[#e5eaf3]">
+              Get Started
+            </button>
+          </Link>
         </div>
       </div>
     </main>
