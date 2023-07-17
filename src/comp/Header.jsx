@@ -46,7 +46,7 @@ const Header = () => {
         <div className="logo sm:flex-1 text-2xl sm:text-2xl ">
           <img
             src="./assets/logo1.svg"
-            className="h-[35px] sm::h-[40px] w-[55px] sm:w-[100px]"
+            className="h-[35px] sm:h-[40px] w-[55px] sm:w-[100px]"
             alt=""
           />
         </div>
