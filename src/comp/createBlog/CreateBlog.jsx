@@ -1,16 +1,15 @@
 import axios from "axios";
-import { useSession } from "next-auth/react";
-
 import React, { useState } from "react";
-import { useRouter } from "next/router";
+
 const CreateBlog = ({ author }) => {
   const CLOUD_NAME = "dakd8y8gh";
   const UPLOAD_PRESET = "my_blog_project_asif";
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [image, setImage] = useState(null);
-  const { data: session } = useSession;
+
   //   console.log(name);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -50,47 +49,66 @@ const CreateBlog = ({ author }) => {
       console.log(error);
     }
   };
-  const router = useRouter();
 
   return (
     <div>
       <div className="wrapper ">
-        <h2>Create Blogs</h2>
         <form
           action="onSubmit"
-          className="text-black flex flex-col m-[100px] justify-center gap-6 "
+          className="text-black flex flex-col m-[100px] justify-center gap-6 max-w-[800px] mx-auto bg-[#1d1e1f] sm:p-10 sm:rounded-md px-3 py-6 "
         >
-          <div className="input flex flex-col text-white">
-            <label htmlFor="">Enter the title</label>
+          <h2 className="text-[#e5eaf3] text-2xl sm:text-2xl md:text-3xl font-light text-center">
+            Create Blogs
+          </h2>
+          <div className="input flex flex-col text-white gap-2">
+            <label
+              htmlFor="title"
+              className="text-[#e5eaf3] text-base sm:text-xl font-light"
+            >
+              Enter The Title
+            </label>
             <input
-              className="text-[#000000]"
+              className="text-[#000000] px-2 py-2 sm:py-3 rounded-md border-none"
               value={title}
               type="text"
-              placeholder="text"
+              placeholder="Text"
               onChange={(e) => setTitle(e.target.value)}
             />
           </div>
-          <div className="text flex flex-col text-white">
-            <label htmlFor="desc">Enter the description of the text</label>
+          <div className="text flex flex-col text-white gap-2">
+            <label
+              htmlFor="desc"
+              className="text-base sm:text-xl font-light text-[#e5eaf3] "
+            >
+              Enter The Description Of The Text
+            </label>
             <textarea
               value={desc}
-              className="text-[#000000]"
-              placeholder="Desc"
+              className="text-[#000000] px-2 py-3 rounded-md min-h-[140px] border-none"
+              placeholder="Description"
               onChange={(e) => {
                 setDesc(e.target.value);
               }}
             />
           </div>
-          <div className="file flex flex-col text-white">
-            <label htmlFor="image">upload the image</label>
+          <div className="file flex flex-col text-white gap-2 ">
+            <label
+              htmlFor="image"
+              className=" text-base font-thin text-[#e5eaf3]"
+            >
+              Upload The Image
+            </label>
             <input
-              className="text-[#000000] "
+              className="text-[#fff] font-light"
               type="file"
               id="image"
               onChange={(e) => setImage(e.target.files[0])}
             />
           </div>
-          <button onClick={handleSubmit} className="bg-[#fff] px-3 py-2">
+          <button
+            onClick={handleSubmit}
+            className="bg-[#fff] px-3 py-[.5rem] sm:py-2 text-base sm:text-xl font-light rounded-md md:hover:font-normal mb-3"
+          >
             Create
           </button>
         </form>
