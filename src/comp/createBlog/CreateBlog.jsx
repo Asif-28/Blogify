@@ -1,7 +1,13 @@
 import axios from "axios";
 import React, { useState } from "react";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const CreateBlog = ({ author }) => {
+  const notify = () => {
+    toast.success("Success!", {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  };
   const CLOUD_NAME = "dakd8y8gh";
   const UPLOAD_PRESET = "my_blog_project_asif";
   const [title, setTitle] = useState("");
@@ -12,6 +18,7 @@ const CreateBlog = ({ author }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!title || !desc || !image || !author) return;
 
     try {
       const imageUrl = await uploadImage();
@@ -54,7 +61,8 @@ const CreateBlog = ({ author }) => {
     <div>
       <div className="wrapper ">
         <form
-          action="onSubmit"
+          // action="onSubmit"
+          onSubmit={handleSubmit}
           className="text-black flex flex-col m-[100px] justify-center gap-6 max-w-[800px] mx-auto bg-[#1d1e1f] sm:p-10 sm:rounded-md px-3 py-6 "
         >
           <h2 className="text-[#e5eaf3] text-2xl sm:text-2xl md:text-3xl font-light text-center">
@@ -72,6 +80,7 @@ const CreateBlog = ({ author }) => {
               value={title}
               type="text"
               placeholder="Text"
+              required
               onChange={(e) => setTitle(e.target.value)}
             />
           </div>
@@ -86,6 +95,7 @@ const CreateBlog = ({ author }) => {
               value={desc}
               className="text-[#000000] px-2 py-3 rounded-md min-h-[140px] border-none"
               placeholder="Description"
+              required
               onChange={(e) => {
                 setDesc(e.target.value);
               }}
@@ -102,14 +112,18 @@ const CreateBlog = ({ author }) => {
               className="text-[#fff] font-light"
               type="file"
               id="image"
+              required
               onChange={(e) => setImage(e.target.files[0])}
             />
           </div>
           <button
-            onClick={handleSubmit}
+            onClick={notify}
+            type="submit"
             className="bg-[#fff] px-3 py-[.5rem] sm:py-2 text-base sm:text-xl font-light rounded-md md:hover:font-normal mb-3"
           >
             Create
+            {/* {!title || !image || !desc ? null : <ToastContainer />} */}
+            <ToastContainer />
           </button>
         </form>
       </div>

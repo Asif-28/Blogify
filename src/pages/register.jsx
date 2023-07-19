@@ -126,10 +126,7 @@ const Register = () => {
                 Register
               </button>
               <Link href="./login">
-                <button
-                  type="submit"
-                  className="min-w-[80px] px-3 py-2 text-lg font-light hover:bg-[#ffd558] bg-[#f5e8c2]"
-                >
+                <button className="min-w-[80px] px-3 py-2 text-lg font-light hover:bg-[#ffd558] bg-[#f5e8c2]">
                   Login
                 </button>
               </Link>

@@ -4,6 +4,8 @@ import "@/styles/globals.scss";
 import { SessionProvider } from "next-auth/react";
 import { Router } from "next/router";
 import { useState } from "react";
+// import { ToastContainer, toast } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
 
 export default function App({
   Component,

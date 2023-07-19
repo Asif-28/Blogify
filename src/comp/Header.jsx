@@ -3,24 +3,6 @@ import Link from "next/link";
 import { signOut, useSession } from "next-auth/react";
 // import Logout from "./Logout";
 
-// const Header = () => {
-//   const { data: session } = useSession();
-//   return (
-//     <main className={styles.main}>
-//       <div className={styles.logo}>Blogs..</div>
-//       <nav className={styles.items}>
-//         <ul className={styles.item}>
-//           <Link href={`/ `}>
-//             <li>Home</li>
-//           </Link>
-//           <Link href="./credentialsLogin">
-//             <li>{session ? `${session.user.name}` : "Login"}</li>
-//           </Link>
-//         </ul>
-//       </nav>
-//     </main>
-//   );
-// };
 const Logout = () => {
   return <button onClick={signOut}>Logout</button>;
 };
@@ -89,3 +71,22 @@ export default Header;
 //   transition-timing-function: ease-in;
 //   transition: all 0.5s;
 // }
+
+// const Header = () => {
+//   const { data: session } = useSession();
+//   return (
+//     <main className={styles.main}>
+//       <div className={styles.logo}>Blogs..</div>
+//       <nav className={styles.items}>
+//         <ul className={styles.item}>
+//           <Link href={`/ `}>
+//             <li>Home</li>
+//           </Link>
+//           <Link href="./credentialsLogin">
+//             <li>{session ? `${session.user.name}` : "Login"}</li>
+//           </Link>
+//         </ul>
+//       </nav>
+//     </main>
+//   );
+// };
