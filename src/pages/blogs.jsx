@@ -34,26 +34,29 @@ const BlogData = ({ data }) => {
   const dataItems = data.data;
   console.log(dataItems.length);
   return (
-    <div className="container mt-[80px]">
+    <div className="mt-[80px]">
       {dataItems.map((item, index) => {
-        // console.log(item);
         return (
           <div key={index} className="">
-            <div className="container  max-w-[1280px] mx-auto mb-10">
-              <div className="article flex flex-col justify-center items-center bg-[#0a0a0a] p-4 rounded-xl ">
+            <div className="container  md:max-w-[1280px] md:mx-auto sm:mb-10 mb-6 px-2 ">
+              <div className="article flex flex-col justify-center items-center bg-[#0a0a0a] p-4 rounded-xl">
                 <div className="top  flex flex-col justify-center">
-                  <h1 className="text-3xl text-center mb-5 ">{item.title}</h1>
-                  <div className="img">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl text-center mb-5 font-thin">
+                    {item.title}
+                  </h1>
+                  <div className="img ">
                     <img
-                      className="max-w-[700px] max-h-[500px] object-fill w-[100vw]"
+                      className="md:max-w-[700px] max-h-[500px] object-fill w-[100vw] rounded-xl mb-5 "
                       src={item.imageUrl}
-                      alt="blog-related-image"
+                      alt="blog-related-image "
                     />
                   </div>
                 </div>
                 <div className="bottom ">
-                  <p className="">{item.desc}</p>
-                  <h3>Author: {item.author}</h3>
+                  <p className=" text-[14px] sm:text-[18px] font-light leading-[1.5] tracking-wide md:max-w-[1000px] justify-start py-4">
+                    {item.desc}
+                  </p>
+                  <h3 className="float-right py-4">Author: {item.author}</h3>
                 </div>
               </div>
             </div>
