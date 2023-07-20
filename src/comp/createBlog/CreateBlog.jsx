@@ -1,8 +1,10 @@
 import axios from "axios";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const CreateBlog = ({ author }) => {
+  const router = useRouter();
   const notify = () => {
     toast.success("Success!", {
       position: toast.POSITION.TOP_RIGHT,
@@ -31,6 +33,7 @@ const CreateBlog = ({ author }) => {
       });
 
       console.log("register success", data);
+      router.push(" ./blogs");
     } catch (error) {
       console.log(error);
     }
