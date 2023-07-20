@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <main>
       <div className="wrapper ">
-        <div className=" bg-[#009191]  flex md:justify-evenly md:items-center sm:min-h-[80vh]  items-start flex-col md:flex-row gap-6 sm:gap-10 min-h-[75vh]  justify-center px-5  ">
+        <div className=" bg-[#009191]  flex md:justify-evenly md:items-center sm:min-h-[80vh]  items-start flex-col md:flex-row gap-6 sm:gap-10 min-h-[65vh]  justify-center px-5  ">
           <div className="left flex flex-col justify-center items-start gap-6 sm:gap-10 mt-10 sm:mt-0">
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl ">
               Continue Exploring
