@@ -38,7 +38,7 @@ const BlogData = ({ data }) => {
       {dataItems.map((item, index) => {
         return (
           <div key={index} className="">
-            <div className="container  md:max-w-[1280px] md:mx-auto sm:mb-10 mb-6 px-2 ">
+            <div className=" md:max-w-[1280px] md:mx-auto sm:mb-10 mb-6 px-2 ">
               <div className="article flex flex-col justify-center items-center bg-[#0a0a0a] p-4 rounded-xl">
                 <div className="top  flex flex-col justify-center">
                   <h1 className="text-2xl sm:text-3xl md:text-4xl text-center mb-5 font-thin">
@@ -46,7 +46,7 @@ const BlogData = ({ data }) => {
                   </h1>
                   <div className="img ">
                     <img
-                      className="md:max-w-[700px] max-h-[500px] object-fill w-[100vw] rounded-xl mb-5 "
+                      className="md:max-w-[700px] max-h-[500px] object-cover w-[100vw] rounded-xl mb-5 "
                       src={item.imageUrl}
                       alt="blog-related-image "
                     />
@@ -67,108 +67,3 @@ const BlogData = ({ data }) => {
   );
 };
 export default Blogs;
-
-// <div>
-// <div className="container mt-[80px] max-w-[1080px] mx-auto ]">
-//   <div className="article flex gap-4 bg-[#0a0a0a] p-4 rounded-xl ">
-//     <div className="left pr-12">
-//       <h1 className="text-2xl ">
-//         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam,
-//         rem.
-//       </h1>
-//       <p className="">
-//         Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum cum
-//         odit totam ea quia dignissimos enim rem at illum corporis.
-//       </p>
-//     </div>
-//     <div className="right">
-//       <div className="img">
-//         <img
-//           src="https://miro.medium.com/v2/resize:fill:250:168/1*RAthRIkRXYs8anYtioLvIw.png"
-//           alt=""
-//         />
-//       </div>
-//     </div>
-//   </div>
-//     <div className="article flex gap-4 bg-[#0a0a0a] p-4 rounded-xl mt-[.5rem]">
-//       <div className="left pr-12">
-//         <h1 className="text-2xl ">
-//           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam,
-//           rem.
-//         </h1>
-//         <p className="">
-//           Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum cum
-//           odit totam ea quia dignissimos enim rem at illum corporis.
-//         </p>
-//       </div>
-//       <div className="right">
-//         <div className="img">
-//           <img
-//             src="https://miro.medium.com/v2/resize:fill:250:168/1*RAthRIkRXYs8anYtioLvIw.png"
-//             alt=""
-//           />
-//         </div>
-//       </div>
-//     </div>
-//     <div className="article flex gap-4 bg-[#0a0a0a] p-4 rounded-xl mt-[.5rem]">
-//       <div className="left pr-12">
-//         <h1 className="text-2xl ">
-//           Lorem ipsum dolor sit amet annn consectetur, adipisicing elit.
-//           Totam, rem.
-//         </h1>
-//         <p className="">
-//           Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum cum
-//           odit totam ea quia dignissimos enim rem at illum corporissf.
-//         </p>
-//       </div>
-//       <div className="right">
-//         <div className="img">
-//           <img
-//             src="https://miro.medium.com/v2/resize:fill:250:168/1*RAthRIkRXYs8anYtioLvIw.png"
-//             alt=""
-//           />
-//         </div>
-//       </div>
-//     </div>
-//     <div className="article flex gap-4 bg-[#0a0a0a] p-4 rounded-xl mt-[.5rem]">
-//       <div className="left pr-12">
-//         <h1 className="text-2xl ">
-//           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam,
-//           rem.
-//         </h1>
-//         <p className="">
-//           Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum cum
-//           odit totam ea quia dignissimos enim rem at illum corporis.
-//         </p>
-//       </div>
-//       <div className="right">
-//         <div className="img">
-//           <img
-//             src="https://miro.medium.com/v2/resize:fill:250:168/1*RAthRIkRXYs8anYtioLvIw.png"
-//             alt=""
-//           />
-//         </div>
-//       </div>
-//     </div>
-//     <div className="article flex gap-4 bg-[#0a0a0a] p-4 rounded-xl mt-[.5rem]">
-//       <div className="left pr-12">
-//         <h1 className="text-2xl ">
-//           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam,
-//           rem.
-//         </h1>
-//         <p className="">
-//           Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum cum
-//           odit totam ea quia dignissimos enim rem at illum corporis.
-//         </p>
-//       </div>
-//       <div className="right">
-//         <div className="img">
-//           <img
-//             src="https://miro.medium.com/v2/resize:fill:250:168/1*RAthRIkRXYs8anYtioLvIw.png"
-//             alt=""
-//           />
-//         </div>
-//       </div>
-//     </div>
-//   </div>
-// </div>

@@ -42,7 +42,7 @@ const Header = () => {
                 <Link href="./blogs">Blog</Link>
               </li>
               <li className="sm:hover:border sm:hover-border-[#e5eaf3] sm:px-[0.4rem] font-light sm:w-[90px] sm:text-center">
-                <Link href="#">Contact</Link>
+                <Link href="./profile">Profile</Link>
               </li>
             </ul>
           </div>
