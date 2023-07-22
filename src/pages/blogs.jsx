@@ -39,21 +39,21 @@ const BlogData = ({ data }) => {
         return (
           <div key={index} className="">
             <div className=" md:max-w-[1280px] md:mx-auto sm:mb-10 mb-6 px-2 ">
-              <div className="article flex flex-col justify-center items-center bg-[#0a0a0a] p-4 rounded-xl">
+              <div className="article flex flex-col justify-center items-center bg-[#0a0a0a] sm:py-8 sm:px-4 p-4 rounded-xl">
                 <div className="top  flex flex-col justify-center">
                   <h1 className="text-2xl sm:text-3xl md:text-4xl text-center mb-5 font-thin">
                     {item.title}
                   </h1>
                   <div className="img ">
                     <img
-                      className="md:max-w-[700px] max-h-[500px] object-cover w-[100vw] rounded-xl mb-5 "
+                      className="md:max-w-[900px] max-h-[600px] object-cover w-[100vw] rounded-xl mb-5 "
                       src={item.imageUrl}
                       alt="blog-related-image "
                     />
                   </div>
                 </div>
                 <div className="bottom ">
-                  <p className=" text-[14px] sm:text-[18px] font-light leading-[1.5] tracking-wide md:max-w-[1000px] justify-start py-4">
+                  <p className="font-mono text-[14px] sm:text-[18px] font-light leading-[1.5] tracking-wide md:max-w-[1000px] justify-start py-4">
                     {item.desc}
                   </p>
                   <h3 className="float-right py-4">Author: {item.author}</h3>
