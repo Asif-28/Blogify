@@ -8,7 +8,7 @@ const Profile = () => {
   const [author, setAuthor] = useState([]);
   const [loading, setLoading] = useState(true);
   const session = useSession();
-  const [blogExits, setBlogExits] = useState(false);
+  let count = 0;
 
   useEffect(() => {
     const GetData = async () => {
@@ -23,18 +23,14 @@ const Profile = () => {
       }
     };
     GetData();
-    author.data.forEach((item) => {
-      if (item.author === session.data.user.name) {
-        setBlogExits(true);
-      }
-    });
   }, []);
   // console.log(session);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="text-center pt-[70px]">Loading...</div>;
   } else {
     console.log(author.data);
+
     return (
       <div>
         <div className="userDetails details flex flex-col mt-[80px] items-center bg-[#f56c6c] py-10 px-4 sm:py-14 ">
@@ -64,8 +60,10 @@ const Profile = () => {
           </h1>
           {author.data.map((item, index) => {
             console.log(item.author);
+
             console.log(session.data.user);
             if (item.author === session.data.user.name) {
+              count++;
               return (
                 <div key={index} className="">
                   <div className=" md:max-w-[1280px] md:mx-auto sm:mb-10 mb-6 px-2 ">
@@ -99,7 +97,7 @@ const Profile = () => {
             }
           })}
         </div>
-        {blogExits ? null : (
+        {count ? null : (
           <div className="flex flex-col items-center py-5 gap-8">
             <h1 className="text-xl sm:text-2xl font-light">No blog Exists</h1>
             <Link href="./myBlogs">
