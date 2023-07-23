@@ -2,8 +2,8 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 // import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+// import { ToastContainer, toast } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
 import styles from "../styles/login.module.scss";
 
 import { signIn, useSession } from "next-auth/react";
@@ -18,7 +18,7 @@ const CreLogin = () => {
     });
   };
   const router = useRouter();
-  const [showToast, setShowToast] = useState(false);
+  // const [showToast, setShowToast] = useState(false);
   const { data: session } = useSession();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
