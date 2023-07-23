@@ -1,26 +1,33 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import axios from "axios";
-import { toast } from "react-hot-toast";
+// import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import styles from "../styles/login.module.scss";
 
 import { signIn, useSession } from "next-auth/react";
 import GoogleIcon from "@mui/icons-material/Google";
 import { GitHub } from "@mui/icons-material";
-import { Alert } from "@mui/material";
+// import { Alert } from "@mui/material";
 
 const CreLogin = () => {
+  const showToastMessage = () => {
+    toast.error("Invalid Email Or Password !", {
+      position: toast.POSITION.TOP_CENTER,
+    });
+  };
   const router = useRouter();
+  const [showToast, setShowToast] = useState(false);
   const { data: session } = useSession();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
-  const [showAlert, setShowAlert] = useState(true);
+  // const [errorMessage, setErrorMessage] = useState("");
+  // const [showAlert, setShowAlert] = useState(true);
 
-  const handleCloseAlert = () => {
-    setShowAlert(false);
-  };
+  // const handleCloseAlert = () => {
+  //   setShowAlert(false);
+  // };
   // LOGIN THOROUGH THE SESSIONS PROVIDED BY THE NEXT-AUTH
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -30,13 +37,14 @@ const CreLogin = () => {
         email,
         password,
       });
+      setShowToast(false);
       console.log(data);
       if (error) {
         throw new Error(error);
       }
     } catch (error) {
-      setErrorMessage("Invalid Email or Password");
-      setShowAlert(true);
+      // setErrorMessage("Invalid Email or Password");
+      // setShowAlert(true);
       console.log(error);
     }
   };
@@ -110,7 +118,7 @@ const CreLogin = () => {
               </div>
               <div className="btn flex gap-3">
                 <button
-                  // onClick={onLogin}
+                  onClick={showToastMessage}
                   type="submit"
                   className="min-w-[80px] px-3 py-2 sm:text-lg font-light hover:bg-[#ffd558] bg-[#f5e8c2]"
                 >
@@ -123,12 +131,13 @@ const CreLogin = () => {
                 </Link>
               </div>
 
-              <div className=" mt-2 md:m-3">
-                {errorMessage && showAlert && (
+              <div className="">
+                {/* {errorMessage && showAlert && (
                   <Alert severity="error" onClose={handleCloseAlert}>
                     {errorMessage}
                   </Alert>
-                )}
+                )} */}
+                {showToast ? null : <ToastContainer />}
               </div>
               <div>
                 <p>

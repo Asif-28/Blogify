@@ -17,7 +17,7 @@ const BlogCard = ({ img, title, desc, authImg, author, date }) => {
           </h3>
           <p className="mt-[1.5rem] text-[.875rem] ">{desc}</p>
         </div>
-        <div className=" flex items-center mt-[3rem] text-[.8em] pl-[1.5rem] leading-5 pb-[2rem]">
+        <div className=" flex items-center mt-[.7rem] text-[.8em] pl-[1.5rem] leading-5 pb-[2rem]">
           <span className="">
             <img
               src={authImg}

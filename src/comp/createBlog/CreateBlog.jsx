@@ -69,7 +69,7 @@ const CreateBlog = ({ author }) => {
           className="text-black flex flex-col m-[100px] justify-center gap-6 max-w-[800px] mx-auto bg-[#1d1e1f] sm:p-10 sm:rounded-md px-3 py-6 "
         >
           <h2 className="text-[#e5eaf3] text-2xl sm:text-2xl md:text-3xl font-light text-center">
-            Create Blogs
+            Create Your Story
           </h2>
           <div className="input flex flex-col text-white gap-2">
             <label

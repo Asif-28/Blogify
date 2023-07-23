@@ -4,7 +4,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="bg-[#0a0a0a] min-h-[10rem] ">
-      <div className="footer sm:flex max-w-[1280px] mx-auto sm:py-6 py-4 pl-3 ">
+      <div className="footer sm:flex max-w-[1280px] mx-auto sm:py-6 py-4 pl-4  ">
         <div className="flex-1 flex flex-col gap-1 cursor-pointer mb-4 sm:mb-0">
           <h2 className="text-xl sm:mb-2">Help</h2>
           <h3 className="font-light">Help Center</h3>
@@ -28,7 +28,7 @@ const Footer = () => {
       </div>
       <div className="copyright">
         <p className="font-thin text-[14px] text-center p-[0.2rem]">
-          Logo Copyright @2022
+          Blogify Copyright @2022
         </p>
       </div>
     </div>

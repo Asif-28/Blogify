@@ -1,12 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
-import { signOut } from "next-auth/react";
 import Hero from "@/comp/Hero";
 import BlogCards from "@/comp/blogCards/BlogCards";
-import Footer from "@/comp/Footer";
-import BloggerPosts from "@/comp/blogCards/ApiData";
-import SliderImg from "@/comp/SliderImg";
+import AboutComp from "@/comp/about/About";
 
 export default function Home() {
   return (
@@ -20,8 +15,7 @@ export default function Home() {
       <main>
         <Hero />
         <BlogCards />
-        <BloggerPosts />
-        <Footer />
+        <AboutComp />
       </main>
     </>
   );

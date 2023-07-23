@@ -22,7 +22,7 @@ function Blogs() {
   return (
     <div>
       {isLoading ? (
-        <p className="text-center pt-[70px]">Loading...</p>
+        <p className="text-center h-[calc(100vh-70px)] pt-[70px]">Loading...</p>
       ) : (
         <BlogData data={blogIdData} />
       )}
@@ -30,9 +30,8 @@ function Blogs() {
   );
 }
 const BlogData = ({ data }) => {
-  console.log(data.data);
   const dataItems = data.data;
-  console.log(dataItems.length);
+
   return (
     <div className="mt-[80px]">
       {dataItems.map((item, index) => {

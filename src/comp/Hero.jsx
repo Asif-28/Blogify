@@ -19,9 +19,11 @@ const Hero = () => {
               <p className="font-light">Post your own blog</p>
             </div>
             <div className="btn flex flex-col gap-3">
-              <div className="btn text-[14px] sm:text-base text-white hover:text-[#009191] font-light bg-[#141414] px-3 py-2 sm:px-5 sm:py-3">
-                Explore About Us
-              </div>
+              <Link href="./login">
+                <div className="btn text-[14px] sm:text-base text-white hover:text-[#009191] font-light bg-[#141414] px-3 py-2 sm:px-5 sm:py-3">
+                  Get Started
+                </div>
+              </Link>
               <Link href="./myBlogs">
                 <div className="btn text-[14px] sm:text-base text-white hover:text-[#009191] font-light bg-[#141414] px-3 py-2 sm:px-5 sm:py-3">
                   Create Your Own Story
@@ -41,9 +43,9 @@ const Hero = () => {
           placeholder="Share Your Views with Us!! "
         />
         <div className="btn">
-          <Link href="./login">
+          <Link href="#">
             <button className="bg-[#009191] bg-transparent border border-[#009191]  whitespace-nowrap text-lg sm:text-xl py-3 sm:py-4 px-8 sm:px-12 rounded-full  font-normal text-[#e5eaf3]">
-              Get Started
+              Send Mail !
             </button>
           </Link>
         </div>

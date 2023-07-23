@@ -1,19 +1,24 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { Alert } from "@mui/material";
 import Link from "next/link";
+// import { Container } from "postcss";
+
 const Register = () => {
   const router = useRouter();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [valid, setValid] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
-  const [showAlert, setShowAlert] = useState(true);
-  const handleCloseAlert = () => {
-    setShowAlert(false);
-  };
+  // const [errorMessage, setErrorMessage] = useState("");
+  const [showAlert, setShowAlert] = useState(false);
+  // const handleCloseAlert = () => {
+  //   setShowAlert(false);
+  // };
+
   const validatePassword = () => {
     // Regex pattern for password validation
     const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
@@ -23,7 +28,20 @@ const Register = () => {
 
     // Update the validity state
     setValid(isValid);
+    {
+      isValid ? setShowAlert(false) : setShowAlert(true);
+    }
     // console.log(valid);
+  };
+  const showToastMessage = () => {
+    toast.error("Invalid Email Or Password !", {
+      position: toast.POSITION.TOP_CENTER,
+    });
+  };
+  const validCredentials = () => {
+    toast.success("Success !", {
+      position: toast.POSITION.TOP_CENTER,
+    });
   };
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -41,11 +59,14 @@ const Register = () => {
         console.log(error);
       }
     } else {
-      setErrorMessage("Please enter a valid password ");
-      setShowAlert(true);
-      setTimeout(() => {
-        setShowAlert(false);
-      }, 3000);
+      // setErrorMessage("Please enter a valid password ");
+      // setShowAlert(true);
+      // setTimeout(() => {
+      //   setShowAlert(false);
+      // }, 3000);
+      {
+        showAlert ? showToastMessage() : validCredentials();
+      }
     }
   };
 
@@ -124,6 +145,8 @@ const Register = () => {
                 className="min-w-[80px] px-3 py-2 text-lg font-light hover:bg-[#ffd558] bg-[#f5e8c2]"
               >
                 Register
+                <ToastContainer />
+                {/* {showAlert ? <ToastContainer /> : <ToastContainer />} */}
               </button>
               <Link href="./login">
                 <button className="min-w-[80px] px-3 py-2 text-lg font-light hover:bg-[#ffd558] bg-[#f5e8c2]">
@@ -132,7 +155,7 @@ const Register = () => {
               </Link>
             </div>
 
-            {errorMessage && showAlert && (
+            {/* {errorMessage && showAlert && (
               <Alert
                 className="m-2 md:m-3 "
                 severity="error"
@@ -140,7 +163,8 @@ const Register = () => {
               >
                 {errorMessage}
               </Alert>
-            )}
+            )} */}
+            {/* {showAlert ? <ToastContainer /> : <ToastContainer />} */}
           </form>
         </div>
       </div>

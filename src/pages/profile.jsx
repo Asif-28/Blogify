@@ -25,11 +25,14 @@ const Profile = () => {
     GetData();
   }, []);
   // console.log(session);
-
   if (loading) {
-    return <div className="text-center pt-[70px]">Loading...</div>;
+    return (
+      <div className="text-center text-xl sm:text-2xl md:text-3xl h-[calc(100vh-70px)] pt-[70px]">
+        Loading...
+      </div>
+    );
   } else {
-    console.log(author.data);
+    // console.log(author.data);
 
     return (
       <div>
@@ -59,9 +62,8 @@ const Profile = () => {
             My Blogs
           </h1>
           {author.data.map((item, index) => {
-            console.log(item.author);
-
-            console.log(session.data.user);
+            // console.log(item.author);
+            // console.log(session.data.user);
             if (item.author === session.data.user.name) {
               count++;
               return (
@@ -98,7 +100,7 @@ const Profile = () => {
           })}
         </div>
         {count ? null : (
-          <div className="flex flex-col items-center py-5 gap-8">
+          <div className="flex flex-col items-center py-5 gap-8 pb-6 sm:pb-8 md:pb-10">
             <h1 className="text-xl sm:text-2xl font-light">No blog Exists</h1>
             <Link href="./myBlogs">
               <button className="bg-[#ffd558] px-3 py-2 sm:px-4 sm:py-3 text-[#000] font-light text-[14px] sm:text-[18px] hover:font-normal ">
