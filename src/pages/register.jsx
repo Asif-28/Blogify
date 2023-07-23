@@ -34,9 +34,15 @@ const Register = () => {
     // console.log(valid);
   };
   const showToastMessage = () => {
-    toast.error("Invalid Email Or Password !", {
-      position: toast.POSITION.TOP_CENTER,
-    });
+    if (showAlert) {
+      toast.error("Invalid Email Or Password !", {
+        position: toast.POSITION.TOP_CENTER,
+      });
+    } else {
+      toast.success("Successful !", {
+        position: toast.POSITION.TOP_CENTER,
+      });
+    }
   };
   const validCredentials = () => {
     toast.success("Success !", {
@@ -65,18 +71,18 @@ const Register = () => {
       //   setShowAlert(false);
       // }, 3000);
       {
-        showAlert ? showToastMessage() : validCredentials();
+        showAlert ? showToastMessage() : null;
       }
     }
   };
 
   return (
     <div
-      style={{
-        backgroundImage: "url('./assets/b.jpg')",
-        filter: "brightness(0.9)",
-        overflow: "hidden",
-      }}
+      // style={{
+      //   backgroundImage: "url('./assets/b.jpg')",
+      //   filter: "brightness(0.9)",
+      //   overflow: "hidden",
+      // }}
       className="flex justify-center bg-center bg-cover min-h-[100vh] items-center "
     >
       <div className="bg-slate-50  text-black px-4 sm:px-8 py-5 sm:py-4 rounded-xl ">
