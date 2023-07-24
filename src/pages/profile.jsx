@@ -3,6 +3,7 @@ import { getSession } from "next-auth/react";
 import { useSession } from "next-auth/react";
 import axios from "axios";
 import Link from "next/link";
+import Loader from "@/comp/Loader";
 
 const Profile = () => {
   const [author, setAuthor] = useState([]);
@@ -27,9 +28,9 @@ const Profile = () => {
   // console.log(session);
   if (loading) {
     return (
-      <div className="text-center text-xl sm:text-2xl md:text-3xl h-[calc(100vh-70px)] pt-[70px]">
-        Loading...
-      </div>
+      <>
+        <Loader />;
+      </>
     );
   } else {
     // console.log(author.data);
@@ -104,7 +105,7 @@ const Profile = () => {
             <h1 className="text-xl sm:text-2xl font-light">No blog Exists</h1>
             <Link href="./myBlogs">
               <button className="bg-[#ffd558] px-3 py-2 sm:px-4 sm:py-3 text-[#000] font-light text-[14px] sm:text-[18px] hover:font-normal ">
-                Create Your Blog Now{" "}
+                Create Your Blog Now
               </button>
             </Link>
           </div>

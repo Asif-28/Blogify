@@ -1,3 +1,4 @@
+import Loader from "@/comp/Loader";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
@@ -19,15 +20,7 @@ function Blogs() {
     GetData();
   }, []);
   // console.log(blogIdData);
-  return (
-    <div>
-      {isLoading ? (
-        <p className="text-center h-[calc(100vh-70px)] pt-[70px]">Loading...</p>
-      ) : (
-        <BlogData data={blogIdData} />
-      )}
-    </div>
-  );
+  return <div>{isLoading ? <Loader /> : <BlogData data={blogIdData} />}</div>;
 }
 const BlogData = ({ data }) => {
   const dataItems = data.data;

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-// import axios from "axios";
+import axios from "axios";
 // import { ToastContainer, toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
 import styles from "../styles/login.module.scss";
@@ -12,11 +12,11 @@ import { GitHub } from "@mui/icons-material";
 import { Alert } from "@mui/material";
 
 const CreLogin = () => {
-  const showToastMessage = () => {
-    toast.error("Invalid Email Or Password !", {
-      position: toast.POSITION.TOP_CENTER,
-    });
-  };
+  // const showToastMessage = () => {
+  //   toast.error("Invalid Email Or Password !", {
+  //     position: toast.POSITION.TOP_CENTER,
+  //   });
+  // };
   const router = useRouter();
   // const [showToast, setShowToast] = useState(false);
   const { data: session } = useSession();
@@ -86,7 +86,7 @@ const CreLogin = () => {
             </Alert>
           )}
         </div>
-        <div className="flex justify-center pt-5 sm:pt-10 items-start min-h-[100vh]">
+        <div className="flex justify-center pt-5 sm:pt-6 items-start min-h-[100vh]">
           <div className="bg-slate-50 text-black px-4 sm:px-8 py-5 sm:py-4 rounded-xl">
             <div className="flex flex-col gap-10 ">
               <form onSubmit={submitHandler}>
@@ -129,7 +129,6 @@ const CreLogin = () => {
                 </div>
                 <div className="btn flex gap-3">
                   <button
-                    onClick={showToastMessage}
                     type="submit"
                     className="min-w-[80px] px-3 py-2 sm:text-lg font-light hover:bg-[#ffd558] bg-[#f5e8c2]"
                   >
