@@ -20,12 +20,12 @@ const Hero = () => {
             </div>
             <div className="btn flex flex-col gap-3">
               <Link href="./login">
-                <div className="btn text-[14px] sm:text-base text-white hover:text-[#009191] font-light bg-[#141414] px-3 py-2 sm:px-5 sm:py-3">
+                <div className="btn text-[14px] sm:text-base text-white hover:text-[#009191] font-light bg-[#141414] px-3 py-2 sm:px-5 sm:py-3 text-center">
                   Get Started
                 </div>
               </Link>
               <Link href="./myBlogs">
-                <div className="btn text-[14px] sm:text-base text-white hover:text-[#009191] font-light bg-[#141414] px-3 py-2 sm:px-5 sm:py-3">
+                <div className="btn text-[14px] sm:text-base text-white hover:text-[#009191] font-light bg-[#141414] px-3 py-2 sm:px-5 sm:py-3 text-center">
                   Create Your Own Story
                 </div>
               </Link>
