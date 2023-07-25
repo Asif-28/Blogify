@@ -15,7 +15,7 @@ const SliderImg = () => {
           modules={[EffectCards]}
           loop={true}
           pagination={true}
-          className="mySwiper md:w-[240px] md:h-[320px] lg:w-[260px] lg:h-[350px] bg-cover "
+          className="mySwiper w-[240px] h-[320px] lg:w-[260px] lg:h-[350px] bg-cover "
         >
           <SwiperSlide className="flex items-center justify-center rounded-lg">
             <img
