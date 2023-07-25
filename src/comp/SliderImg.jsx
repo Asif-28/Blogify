@@ -6,6 +6,10 @@ import "swiper/css/effect-cards";
 import { EffectCards } from "swiper/modules";
 // import Image from "next/image";
 const SliderImg = () => {
+  const handleImageError = (event) => {
+    event.target.src =
+      "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"; // Replace with a fallback image URL
+  };
   return (
     <div className="py-6">
       <>
@@ -21,7 +25,8 @@ const SliderImg = () => {
             <img
               className="w-[100%] h-[100%] bg-cover"
               src="https://plus.unsplash.com/premium_photo-1688522732585-9c1021a0a021?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0OHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-              alt=""
+              alt="title"
+              onError={handleImageError}
             />
           </SwiperSlide>
           <SwiperSlide className="flex items-center justify-center rounded-lg  ">

@@ -1,8 +1,7 @@
-import Image from "next/image";
 import React from "react";
 
 const BlogCard = ({ img, title, desc, authImg, author, date }) => {
-  // const maxWords = 10;
+
   const truncateString = (desc, maxWords) => {
     const words = desc.split(" ");
     if (words.length > maxWords) {
@@ -21,8 +20,8 @@ const BlogCard = ({ img, title, desc, authImg, author, date }) => {
             className="min-h-[230px] max-h-[230px] w-[100%] object-cover"
           />
         </div>
-        <div className="content p-[1.5rem] max-h-[230px] overflow-clip">
-          <h3 className="text-[1.5rem] font-light overflow-hidden leading-6 md:hover:text-[#009191]">
+        <div className="content p-[1rem] sm:p-[1.5rem] max-h-[230px] overflow-clip">
+          <h3 className="text-[1.5rem] font-light overflow-hidden leading-6 md:hover:text-[#009191] pb-1">
             {title}
           </h3>
           <p className="mt-[1.5rem] text-[.875rem] sm:min-h-[150px] ">
