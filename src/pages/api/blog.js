@@ -1,12 +1,12 @@
 import Blog from "../../../models/blogArticle";
-import { NextRequest, NextResponse } from "next/server";
+// import { NextRequest, NextResponse } from "next/server";
 
 import dbConnect from "../../../config/dbConnect";
 dbConnect();
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
-    const { title, desc, author, imageUrl } = req.body;
+    const { title, desc, author, imageUrl, category } = req.body;
 
     try {
       const existingBlog = await Blog.findOne({ title });
@@ -20,6 +20,7 @@ export default async function handler(req, res) {
         desc,
         imageUrl,
         author,
+        category,
       });
 
       const savedBlog = await newBlog.save();

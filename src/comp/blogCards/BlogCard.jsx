@@ -1,7 +1,6 @@
 import React from "react";
 
 const BlogCard = ({ img, title, desc, authImg, author, date }) => {
-
   const truncateString = (desc, maxWords) => {
     const words = desc.split(" ");
     if (words.length > maxWords) {

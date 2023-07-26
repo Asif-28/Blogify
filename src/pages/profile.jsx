@@ -70,11 +70,14 @@ const Profile = () => {
               return (
                 <div key={index} className="">
                   <div className=" md:max-w-[1280px] md:mx-auto sm:mb-10 mb-6 px-2 ">
-                    <div className="article flex flex-col justify-center items-center bg-[#0a0a0a] p-4 rounded-xl">
+                    <div className="article flex flex-col justify-center items-center bg-[#0a0a0a] md:pt-6 p-4 rounded-xl">
                       <div className="top  flex flex-col justify-center">
                         <h1 className="text-2xl sm:text-3xl md:text-4xl text-center mb-5 font-thin">
                           {item.title}
                         </h1>
+                        <h3 className="text-[1rem] md:text-2xl mb-3 font-thin">
+                          Category: {item.category}
+                        </h3>
                         <div className="img ">
                           <img
                             className="md:max-w-[700px] max-h-[500px] object-cover w-[100vw] rounded-xl mb-5 "

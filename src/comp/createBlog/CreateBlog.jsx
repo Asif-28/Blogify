@@ -3,24 +3,30 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+// import Loader from "../Loader";
 const CreateBlog = ({ author }) => {
   const router = useRouter();
   const notify = () => {
-    toast.success("Success!", {
-      position: toast.POSITION.TOP_RIGHT,
-    });
+    if (!title || !desc || !image || !author || !category) return;
+    else {
+      toast.success("Success!", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+    }
   };
   const CLOUD_NAME = "dakd8y8gh";
   const UPLOAD_PRESET = "my_blog_project_asif";
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [image, setImage] = useState(null);
+  const [category, setCategory] = useState("Technology");
 
-  //   console.log(name);
+  // console.log(category);
+  // console.log(title);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!title || !desc || !image || !author) return;
+    if (!title || !desc || !image || !author || !category) return;
 
     try {
       const imageUrl = await uploadImage();
@@ -30,9 +36,15 @@ const CreateBlog = ({ author }) => {
         desc,
         imageUrl,
         author,
+        category,
       });
 
       console.log("register success", data);
+      // if (!data) {
+      //   <Loader />;
+      // } else {
+      //   router.push(" ./blogs");
+      // }
       router.push(" ./blogs");
     } catch (error) {
       console.log(error);
@@ -87,6 +99,26 @@ const CreateBlog = ({ author }) => {
               onChange={(e) => setTitle(e.target.value)}
             />
           </div>
+          <div className="input flex flex-col text-white gap-2">
+            <label
+              htmlFor="category"
+              className="text-[#e5eaf3] text-base sm:text-xl font-light"
+            >
+              Category
+            </label>
+
+            <select
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+              className="text-[#000000] px-2 py-2 sm:py-3 rounded-md border-none"
+            >
+              <option value="Technology">Technology</option>
+              <option value="Lifestyle">Lifestyle</option>
+              <option value="Travel">Travel </option>
+              <option value="Food">Food</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
           <div className="text flex flex-col text-white gap-2">
             <label
               htmlFor="desc"
@@ -125,8 +157,7 @@ const CreateBlog = ({ author }) => {
             className="bg-[#fff] px-3 py-[.5rem] sm:py-2 text-base sm:text-xl font-light rounded-md md:hover:font-normal mb-3"
           >
             Create
-            {/* {!title || !image || !desc ? null : <ToastContainer />} */}
-            <ToastContainer />
+            {<ToastContainer />}
           </button>
         </form>
       </div>

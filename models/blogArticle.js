@@ -20,6 +20,10 @@ const BlogSchema = new Schema({
     type: String,
     required: true,
   },
+  category: {
+    type: String,
+    required: true,
+  },
 });
 
 // Create the model from the schema

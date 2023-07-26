@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Alert } from "@mui/material";
+// import { Alert } from "@mui/material";
 import Link from "next/link";
 // import { Container } from "postcss";
 
@@ -44,11 +44,11 @@ const Register = () => {
       });
     }
   };
-  const validCredentials = () => {
-    toast.success("Success !", {
-      position: toast.POSITION.TOP_CENTER,
-    });
-  };
+  // const validCredentials = () => {
+  //   toast.success("Success !", {
+  //     position: toast.POSITION.TOP_CENTER,
+  //   });
+  // };
   const submitHandler = async (e) => {
     e.preventDefault();
     if (valid) {
