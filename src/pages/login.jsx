@@ -86,7 +86,7 @@ const CreLogin = () => {
             </Alert>
           )}
         </div>
-        <div className="flex justify-center pt-5 sm:pt-6 items-start min-h-[100vh]">
+        <div className="flex justify-center pt-5 sm:pt-0 items-start min-h-[100vh]">
           <div className="bg-slate-50 text-black px-4 sm:px-8 py-5 sm:py-4 rounded-xl">
             <div className="flex flex-col gap-10 ">
               <form onSubmit={submitHandler}>
