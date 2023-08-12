@@ -1,7 +1,7 @@
 
-import Loader from "@/comp/Loader";
 import Footer from "@/comp/header-footer/Footer";
 import Header from "@/comp/header-footer/Header";
+import Loader from "@/comp/loader/Loader";
 import "@/styles/globals.scss";
 import { SessionProvider } from "next-auth/react";
 import { Router } from "next/router";

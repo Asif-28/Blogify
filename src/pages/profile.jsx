@@ -3,7 +3,7 @@ import { getSession } from "next-auth/react";
 import { useSession } from "next-auth/react";
 import axios from "axios";
 import Link from "next/link";
-import Loader from "@/comp/Loader";
+import Loader from "@/comp/loader/Loader";
 
 const Profile = () => {
   const [author, setAuthor] = useState([]);
