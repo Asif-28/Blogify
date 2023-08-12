@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Hero from "@/comp/Hero";
+import Hero from "@/comp/hero/Hero";
 import BlogCards from "@/comp/blogCards/BlogCards";
 import AboutComp from "@/comp/about/About";
 

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import SliderImg from "./SliderImg";
 import Link from "next/link";
+import SliderImg from "../slider/SliderImg";
 
 const Hero = () => {
   return (
