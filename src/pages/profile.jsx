@@ -118,6 +118,8 @@ const Profile = () => {
   }
 };
 
+//This action is happening in the server side of the application.
+//It is checking for session through getServer session and then redirecting it .
 export async function getServerSideProps(context) {
   const session = await getSession(context);
   if (session && session.user === undefined) {
