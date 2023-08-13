@@ -16,7 +16,7 @@ module.exports = {
         lg: "1440px",
       },
       fontFamily: {
-        'cursive': ['Special Elite', 'cursive']
+        'cur': ['Special Elite', 'cursive']
       },
     },
   },
