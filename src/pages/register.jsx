@@ -83,7 +83,7 @@ const Register = () => {
       //   filter: "brightness(0.9)",
       //   overflow: "hidden",
       // }}
-      className="flex justify-center bg-center bg-cover min-h-[100vh] items-center "
+      className="flex justify-center bg-center bg-cover min-h-[100vh] items-start mt-[128px] sm:mt-[140px] pt-5 sm:pt-0  "
     >
       <div className="bg-slate-50  text-black px-4 sm:px-8 py-5 sm:py-4 rounded-xl ">
         <div className="flex flex-col gap-10 ">
@@ -144,7 +144,7 @@ const Register = () => {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
-            <div className="btn flex gap-4 ">
+            <div className="btn flex gap-4 py-2 sm:py-4">
               <button
                 type="submit"
                 onClick={validatePassword}
