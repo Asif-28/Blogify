@@ -3,7 +3,7 @@ import { getSession } from "next-auth/react";
 import { useSession } from "next-auth/react";
 import axios from "axios";
 import Link from "next/link";
-import Loader from "@/comp/Loader";
+import Loader from "@/comp/loader/Loader";
 
 const Profile = () => {
   const [author, setAuthor] = useState([]);
@@ -118,6 +118,8 @@ const Profile = () => {
   }
 };
 
+//This action is happening in the server side of the application.
+//It is checking for session through getServer session and then redirecting it .
 export async function getServerSideProps(context) {
   const session = await getSession(context);
   if (session && session.user === undefined) {

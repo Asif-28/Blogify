@@ -4,7 +4,7 @@ import { useSession } from "next-auth/react";
 import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import SliderImg from "@/comp/SliderImg";
+import SliderImg from "@/comp/slider/SliderImg";
 
 const MyBlogs = () => {
   const router = useRouter();

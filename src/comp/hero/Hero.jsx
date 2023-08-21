@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import SliderImg from "./SliderImg";
 import Link from "next/link";
+import SliderImg from "../slider/SliderImg";
 
 const Hero = () => {
   return (
@@ -9,14 +9,14 @@ const Hero = () => {
       <div className="wrapper ">
         <div className=" bg-[#009191]  flex md:justify-evenly md:items-center sm:min-h-[80vh]  items-start flex-col md:flex-row gap-6 sm:gap-10 min-h-[65vh]  justify-center px-5  ">
           <div className="left flex flex-col justify-center items-start gap-6 sm:gap-10 mt-10 sm:mt-0">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl ">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-cur">
               Continue Exploring
             </h1>
             <div className="details text-[18px] sm:text-2xl tracking-wider ">
-              <p className="font-light">
+              <p className="font-light font-cur">
                 Discover new stories,thinking,exciting blogs
               </p>
-              <p className="font-light">Post your own blog</p>
+              <p className="font-light font-cur">Post your own blog</p>
             </div>
             <div className="btn flex flex-col gap-3">
               <Link href="./login">

@@ -15,6 +15,9 @@ module.exports = {
         md: "960px",
         lg: "1440px",
       },
+      fontFamily: {
+        'cur': ['Special Elite', 'cursive']
+      },
     },
   },
   plugins: [],

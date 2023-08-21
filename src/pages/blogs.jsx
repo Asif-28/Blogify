@@ -1,4 +1,4 @@
-import Loader from "@/comp/Loader";
+import Loader from "@/comp/loader/Loader";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
