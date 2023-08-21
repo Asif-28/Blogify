@@ -35,7 +35,7 @@ const Header = () => {
   return (
     <div className="relative">
       <div
-        className="fixed top-2 left-2 backdrop-blur-sm z-50 p-2 mt-1 mr-3 text-sm text-white rounded-lg sm:hidden"
+        className="fixed top-2 left-2 backdrop-blur-sm z-50 p-2 mt-1 mr-3 text-sm text-white rounded-lg md:hidden"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
         <DensitySmallIcon className='text-2xl' />
@@ -43,14 +43,14 @@ const Header = () => {
       
    <div className={`nav ${show && `nav__black`}`}>
       <div className="container justify-between px-3  sm:px-6 flex max-w-[1280px] mx-auto ">
-        <div className="logo pl-8 sm:pl-0 ">
+        <div className="logo pl-8 md:pl-0 ">
            <img
             src="./assets/logo1.svg"
-            className="h-[40px] sm:h-[50px] w-[80px] sm:w-[100px]"
+            className="h-[40px] sm:h-[45px] min-w-[70px] sm:w-[100px]"
             alt=""
           />
         </div>
-        <div className="hidden  sm:flex sm:flex-1 gap-8 ">
+        <div className="hidden  md:flex md:flex-1 gap-8 ">
           <div className="flex-1 ">
             <ul className="flex justify-center gap-2 sm:gap-6 text-[17px] sm:text-[20px] sm:font-normal ">
               <li className="sm:hover:border sm:hover-border-[#e5eaf3] sm:px-[0.4rem] font-light sm:w-[70px] sm:text-center ">
@@ -87,7 +87,7 @@ const Header = () => {
       >
    
       <div className=" flex flex-col mx-auto ">
-        <div className="logo  text-2xl sm:text-2xl ">
+        <div className="logo ">
           <img
             src="./assets/logo1.svg"
             className="h-[70px] w-[70px]"
@@ -96,17 +96,17 @@ const Header = () => {
         </div>
         <div className="flex flex-col pt-8">
           <div className="">
-            <ul className="flex flex-col justify-center gap-3 sm:gap-6 text-[20px] sm:text-[20px] sm:font-normal ">
-              <li className="sm:hover:border sm:hover-border-[#e5eaf3] sm:px-[0.4rem] font-light sm:w-[70px] sm:text-center ">
+            <ul className="flex flex-col justify-center gap-4 sm:gap-6 text-[22px] font-normal ">
+              <li className="sm:px-[0.4rem] font-light sm:w-[70px]">
                 <Link href="/">Home</Link>
               </li>
-              <li className="sm:hover:border sm:hover-border-[#e5eaf3] sm:px-[0.4rem] font-light sm:w-[60px] sm:text-center">
+              <li className="sm:px-[0.4rem] font-light sm:w-[60px]">
                 <Link href="./blogs">Blogs</Link>
               </li>
-              <li className="sm:hover:border sm:hover-border-[#e5eaf3] sm:px-[0.4rem] font-light sm:w-[90px] sm:text-center">
+              <li className="sm:px-[0.4rem] font-light sm:w-[90px]">
                 <Link href="./profile">Profile</Link>
               </li>
-              <li className="sm:hover:border sm:hover-border-[#e5eaf3] sm:px-[0.4rem] font-light sm:w-[150px] sm:text-center">
+              <li className="sm:px-[0.4rem] font-light sm:w-[150px]">
                 <Link href="./myBlogs">CreateBlogs</Link>
               </li>
             </ul>
