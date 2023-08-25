@@ -67,14 +67,15 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <div className="login flex-2 text-[17px] sm:text-[20px] sm:font-normal">
+
+        </div>
+        <div className="login flex-2 text-[20px] sm:text-[22px] sm:font-normal">
             <Link href="./login">
-              <li className="list-none font-light border px-[0.2rem] sm:border-[#fff] sm:px-[0.4rem]">
+              <li className="list-none font-light border px-[0.5rem] sm:border-[#fff] sm:px-[0.8rem]">
                 {session ? <Logout /> : "Login"}
               </li>
             </Link>
           </div>
-        </div>
       </div>
     </div>
   
@@ -96,28 +97,32 @@ const Header = () => {
         </div>
         <div className="flex flex-col pt-8">
           <div className="">
-            <ul className="flex flex-col justify-center gap-4 sm:gap-6 text-[22px] font-normal ">
-              <li className="sm:px-[0.4rem] font-light sm:w-[70px]">
+            <ul className="flex flex-col justify-center gap-7 text-[22px] font-normal ">
+              <li className=" font-light sm:w-[70px]">
                 <Link href="/">Home</Link>
+                <div className='w-[65px] h-[1px] bg-white mt-[2px]' />
               </li>
-              <li className="sm:px-[0.4rem] font-light sm:w-[60px]">
+              <li className="font-light">
                 <Link href="./blogs">Blogs</Link>
+                <div className='w-[60px] h-[1px] bg-white mt-[2px]'/>
               </li>
-              <li className="sm:px-[0.4rem] font-light sm:w-[90px]">
+              <li className="font-light">
                 <Link href="./profile">Profile</Link>
+                <div className='w-[70px] h-[1px] bg-white mt-[2px]'/>
               </li>
-              <li className="sm:px-[0.4rem] font-light sm:w-[150px]">
+              <li className="font-light">
                 <Link href="./myBlogs">CreateBlogs</Link>
+                <div className='w-[125px] h-[1px] bg-white'/>
               </li>
             </ul>
           </div>
-          <div className="login pt-8 font-[24px]">
+          {/* <div className="login pt-8 font-[24px]">
             <Link href="./login">
               <li className="text-center list-none font-light border px-[0.2rem] sm:border-[#fff] sm:px-[0.4rem]">
                 {session ? <Logout /> : "Login"}
               </li>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
    
